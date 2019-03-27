@@ -1,0 +1,71 @@
+.problems {
+
+}
+
+.problems__wrap {
+  @include wrapper;
+}
+
+.problems__image {
+  margin-left: - pads(small);
+  margin-bottom: 30px;
+
+  img {
+    width: 100% !important;
+    height: 100%;
+    @include ofi(cover, top center);
+  }
+}
+
+.problems__btn {
+  margin-top: 20px;
+}
+
+@include respond-to(medium) {
+  .problems {
+    position: relative;
+  }
+
+  .problems__image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-100%);
+    margin-left: 0;
+  }
+
+  .problems__text {
+    width: 50%;
+    margin-left: auto;
+    padding-left: 30px;
+  }
+
+  .problems__heading {
+    transform: translate(-50px);
+  }
+
+  .problems__list {
+    .list__item {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .problems__image {
+  }
+
+  .problems__text {
+    padding-left: 50px;
+  }
+
+  .problems__heading {
+    transform: translate(-100px);
+  }
+
+  .problems__list {
+    .list__item {
+      margin-bottom: 7px;
+    }
+  }
+}

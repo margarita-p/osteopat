@@ -83,12 +83,12 @@
     margin-right: - pads(medium);
 
     .picture {
-      transform: translate(-40px);
+      transform: translate(-60px);
     }
   }
 
   .intro__video-btn {
-    transform: translate(-30px, calc(-50% + 70px));
+    transform: translate(-30px, 60%);
   }
 
   .intro__btn {

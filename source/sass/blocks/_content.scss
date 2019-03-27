@@ -2,8 +2,9 @@
   @include wrapper;
 }
 
-.content__block {
-  margin-bottom: 64px;
+.content__section {
+  margin-bottom: 20px;
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -14,13 +15,13 @@
 }
 
 @include respond-to(medium) {
-  .content__block {
-    margin-bottom: 150px;
+  .content__section {
+    margin-bottom: 40px;
   }
 }
 
 @include respond-to(large) {
-  .content__block {
-    margin-bottom: 200px;
+  .content__section {
+    margin-bottom: 60px;
   }
 }

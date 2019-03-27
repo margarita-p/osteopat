@@ -5,7 +5,7 @@
 
 .list__item {
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   padding-left: 16px;
 
   &::before {
@@ -23,7 +23,7 @@
 
 @include respond-to(medium) {
   .list__item {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     padding-left: 18px;
 
     &::before {

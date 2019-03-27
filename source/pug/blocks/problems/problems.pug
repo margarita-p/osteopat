@@ -1,0 +1,44 @@
+mixin problems(data)
+    +el({
+        tag: 'section',
+        class: 'problems',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .problems__wrap
+            +half-round({
+                mix: 'problems__image',
+                mod: ['lg', 'right-lg'],
+                image: 'massage',
+                imageExp: 'jpg',
+                alt: 'Доктор-остеопат делает массаж пациенту'
+            })
+            .problems__text
+                h2.problems__heading
+                    | Проблемы, которые решает остеопрактика
+                +list({
+                    mix: 'problems__list',
+                    items: [
+                        'Головные боли',
+                        'Частые головокружения',
+                        'Последствия травм и переломов',
+                        'Нарушение половой функции в результате',
+                        'застоя крови в малом тазу',
+                        'Расстройства внимания и памяти',
+                        'Боли в суставах',
+                        'Боли в спине',
+                        'Болезненные месячные',
+                        'Бессонница',
+                        'Нарушение артериального давления',
+                        'Геморрой',
+                        'Аденоиды',
+                        'Проблемы пищеварительного тракта, запоры',
+                        'Снижение имунитета и др.',
+                    ]
+                })
+                +button({
+                    mix: 'problems__btn',
+                    mod: 'bg-primary',
+                    text: 'Записаться на приём'
+                })
