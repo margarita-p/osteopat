@@ -8,7 +8,7 @@
     "s": "npm run start",
     "create": "node create.js",
     "c": "npm run create",
-    "deploy": "set NODE_ENV=production gulp build && gulp copy && git add . && git commit -m 'deploy' && git push origin master && gulp deploy && git checkout gh-pages && git push origin gh-pages && git checkout master --force",
+    "deploy": "gulp deploy && git checkout gh-pages && git push origin gh-pages && git checkout master --force",
     "d": "npm run deploy",
     "build": "gulp build",
     "b": "npm run build",
