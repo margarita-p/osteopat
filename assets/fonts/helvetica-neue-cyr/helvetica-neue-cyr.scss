@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src:
+    url('../assets/fonts/helvetica-neue-cyr/helvetica-neue-cyr-roman.woff2') format('woff2'),
+    url('../assets/fonts/helvetica-neue-cyr/helvetica-neue-cyr-roman.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-display: auto;
+  src:
+    url('../assets/fonts/helvetica-neue-cyr/helvetica-neue-cyr-medium.woff2') format('woff2'),
+    url('../assets/fonts/helvetica-neue-cyr/helvetica-neue-cyr-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  src:
+    url('../assets/fonts/helvetica-neue-cyr/helvetica-neue-cyr-bold.woff2') format('woff2'),
+    url('../assets/fonts/helvetica-neue-cyr/helvetica-neue-cyr-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src:
+    url('../assets/fonts/helvetica-neue-cyr/helvetica-neue-cyr-black.woff2') format('woff2'),
+    url('../assets/fonts/helvetica-neue-cyr/helvetica-neue-cyr-black.woff') format('woff');
+}
