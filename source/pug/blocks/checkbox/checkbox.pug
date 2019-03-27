@@ -1,0 +1,22 @@
+mixin checkbox(data)
+    +el({
+        tag: 'label',
+        class: 'checkbox',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        +el({
+            tag: 'input',
+            class: 'hidden checkbox__input',
+            type: 'checkbox',
+            name: data.name,
+            checked: data.checked,
+            disabled: data.disabled,
+            required: data.required
+        })&attributes(attributes)
+        +el({
+            tag: 'span',
+            class: 'checkbox__label',
+            text: data.label
+        })

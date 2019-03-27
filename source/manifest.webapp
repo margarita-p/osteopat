@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "Lipsum",
+  "launch_path": "/index.html",
+  "description": "",
+  "icons": {
+    "128": ""
+  },
+  "developer": {
+    "name": "Lorem ipsum",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "ru",
+  "permissions": {
+  },
+  "locales": {
+    "ru": {
+      "name": "Lipsum",
+      "description": ""
+    }
+  }
+}

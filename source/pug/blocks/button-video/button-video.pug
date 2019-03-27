@@ -1,0 +1,19 @@
+mixin button-video(data)
+    +el({
+        tag: 'button',
+        class: 'btn-video',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        type: data.type,
+
+    })&attributes(attributes)
+        +el({
+            tag: 'span',
+            class: 'btn-video__text',
+            text: 'Посмотрите видео',
+        })
+        +el({
+            tag: 'span',
+            class: 'btn-video__icon',
+        })

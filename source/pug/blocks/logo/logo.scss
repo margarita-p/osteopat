@@ -1,0 +1,38 @@
+.logo {
+  text-decoration: none !important;
+}
+
+.logo,
+.logo_picture,
+.logo__image {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+
+@include respond-to(medium) {
+  .logo {
+    width: auto;
+  }
+
+  .logo,
+  .logo_picture,
+  .logo__image {
+    width: 116px;
+    height: 60px;
+  }
+}
+
+@include respond-to(large) {
+  .logo {
+    width: auto;
+  }
+
+  .logo,
+  .logo_picture,
+  .logo__image {
+    width: 151px;
+    height: 78px;
+  }
+}

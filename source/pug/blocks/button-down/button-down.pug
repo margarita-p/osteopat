@@ -1,0 +1,8 @@
+mixin button-down(data)
+    +el({
+        tag: 'button',
+        class: 'btn-down',
+        mod: data.mod,
+        mix: data.mix,
+        ariaLabel: 'Прокрутить вниз'
+    })&attributes(attributes)

@@ -1,0 +1,51 @@
+@mixin icon-burger ($thickness, $color, $distanse) {
+  position: relative;
+  display: block;
+  top: calc(50% - #{$thickness / 2});
+  height: $thickness;
+  border-radius: $thickness / 2;
+  background-color: $color;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: $thickness;
+    border-radius: $thickness / 2;
+    background-color: $color;
+    transform-origin: center;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  &::before {
+    top: - $distanse;
+  }
+
+  &::after {
+    bottom: - $distanse;
+  }
+}
+
+@mixin icon-nav-color ($color) {
+  background-color: $color;
+
+  &::before,
+  &::after {
+    background-color: $color;
+  }
+}
+
+@mixin icon-nav-distanse ($distanse) {
+  &::before {
+    top: - $distanse;
+  }
+
+  &::after {
+    bottom: - $distanse;
+  }
+}

@@ -1,0 +1,24 @@
+@mixin icon-arrow ($size, $thickness, $color, $deg) {
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: calc(50% - #{$size /2});
+    width: $size;
+    height: $size;
+    border-top: $thickness solid;
+    border-right: $thickness solid;
+    border-top-color: $color;
+    border-right-color: $color;
+    transform: rotate($deg);
+    transform-origin: center;
+    @content /* stylelint-disable-line */
+  }
+}
+
+@mixin icon-arrow-color ($color) {
+  &::after {
+    border-top-color: $color;
+    border-right-color: $color;
+  }
+}

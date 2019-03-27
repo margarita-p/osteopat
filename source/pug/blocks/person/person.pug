@@ -1,0 +1,19 @@
+mixin person(data)
+    +el({
+        class: 'person',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'person__prof',
+            text: data.person.prof
+        })
+        +el({
+            class: 'person__last-name',
+            text: data.person.lastName
+        })
+        +el({
+            class: 'person__first-name',
+            text: data.person.firstName
+        })

@@ -1,0 +1,72 @@
+mixin header(data)
+
+    -
+        var phones = [
+            {
+                descr: 'Севастополь',
+                href: '79785032856',
+                phone: '<span>+7 (978)</span> 503-28-56',
+            },
+            {
+                descr: 'Санкт-Петербург',
+                href: '78121234567',
+                phone: '<span>+7 (812)</span> 123-45-67',
+            },
+        ];
+
+    -
+        var person = {
+            prof: 'Доктор-остеопат',
+            lastName: 'Иванчегло',
+            firstName: 'Валентин Александрович'
+        };
+
+    -
+        var nav = [
+            'Главная',
+            'О докторе',
+            'Остеопрактика',
+            'Биологическое центрирование',
+            'Остеопатия',
+            'Вопрос-ответ',
+            'Отзывы',
+            'Полезная информация',
+            'Контакты',
+        ];
+
+    +el({
+        tag: 'header',
+        class: 'header',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'header__wrap',
+        })
+            .header__top
+                +logo({
+                    mix: 'header__logo',
+                })
+                +person({
+                    mix: 'header__person',
+                    person: person
+                })
+                +phone-header({
+                    mix: 'header__phone header__phone--desk',
+                    items: phones
+                })
+                +button-nav({
+                    mix: 'header__button-nav',
+                })
+            nav.header__main-nav
+                +main-nav({
+                    items: nav
+                })
+                +phone-header({
+                    mix: 'header__phone header__phone--mob',
+                    items: phones
+                })
+            +overlay({
+                mod: 'header'
+            })

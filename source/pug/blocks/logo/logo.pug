@@ -1,0 +1,16 @@
+mixin logo(data)
+    +el({
+        tag: 'a',
+        class: 'logo',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        href: main == true ? 'none' : 'index.html',
+        title: main == true ? data.title : 'Вернуться на главную страницу',
+    })&attributes(attributes)
+        +el({
+            tag: 'picture',
+            class: 'logo_picture',
+        })
+            source(media='(min-width: 768px)' srcset='./assets/images/logo.svg')
+            img.logo__image(src='./assets/images/logo-sm.svg' alt='Остеопрактика')

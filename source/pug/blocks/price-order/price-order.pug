@@ -1,0 +1,46 @@
+mixin price-order(data)
+    +el({
+        class: 'price-order',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'h3',
+            class: 'price-order__heading',
+            text: 'Узнайте цену за&nbsp;3&nbsp;минуты'
+        })
+        +el({
+            tag: 'p',
+            class: 'price-order__text',
+            text: 'Оставьте заявку на расчет цены и&nbsp;узнайте точные сроки и&nbsp;стоимость работ'
+        })
+        +form({})
+            .price-order__field-group
+                +field({
+                    mix: 'price-order__field',
+                    icon: 'user',
+                    mod: 'icon',
+                    label: 'Имя пользователя',
+                    required: true
+                })
+                +field({
+                    mix: 'price-order__field',
+                    icon: 'phone',
+                    mod: 'icon',
+                    label: 'Телефон',
+                    type: 'tel',
+                    required: true
+                })
+            +button({
+                mix: 'price-order__submit',
+                mod: 'bg-primary',
+                type: 'submit',
+                text: 'Узнать цену'
+            })
+            +checkbox({
+                mix: 'price-order__checkbox',
+                mod: 'small',
+                label: 'Согласие с&nbsp;политикой конфиденциальности',
+                required: true,
+            })

@@ -1,0 +1,45 @@
+.slick-button {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: none;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background-color: rgba(#fff, 0.3);
+  border: none;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  outline: none;
+
+  @include icon-arrow(12px, 2px, color(black), 45deg) {
+    left: 50%;
+  }
+
+  @include hover {
+    background-color: rgba(#fff, 0.9);
+  }
+
+  &_prev {
+    left: 20px;
+
+    &::after {
+      transform: rotate(-135deg) translate(3px, -3px);
+    }
+  }
+
+  &_next {
+    right: 20px;
+
+    &::after {
+      margin-left: -7px;
+    }
+  }
+}
+
+@include respond-to(small_lg) {
+  .slick-button {
+    display: block;
+  }
+}

@@ -1,0 +1,64 @@
+/* stylelint-disable */
+
+@function get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function breakpoints($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+  @warn "Unknown `#{$key}` in $breakpoints.";
+  @return null;
+}
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@function z($key) {
+  @if map-has-key($z_layers, $key) {
+    @return map-get($z_layers, $key);
+  }
+  @warn "Unknown `#{$key}` in $z_layers.";
+  @return null;
+}
+
+@function font($key) {
+  @if map-has-key($fonts, $key) {
+    @return map-get($fonts, $key);
+  }
+  @warn "Unknown `#{$key}` in $fonts.";
+  @return null;
+}
+
+@function duration($key) {
+  @if map-has-key($durations, $key) {
+    @return map-get($durations, $key);
+  }
+  @warn "Unknown `#{$key}` in $durations.";
+  @return null;
+}
+
+@function pads($key) {
+  @if map-has-key($pads, $key) {
+    @return map-get($pads, $key);
+  }
+  @warn "Unknown `#{$key}` in $pads.";
+  @return null;
+}
+
+@function func($key) {
+  @if map-has-key($func, $key) {
+    @return map-get($func, $key);
+  }
+  @warn "Unknown `#{$key}` in $func.";
+  @return null;
+}

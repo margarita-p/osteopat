@@ -1,0 +1,8 @@
+mixin features(data)
+    +el({
+        tag: 'article',
+        class: 'features',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)

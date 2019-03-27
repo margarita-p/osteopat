@@ -1,0 +1,39 @@
+@mixin icon-cross ($thickness, $color, $deg) {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - #{$thickness / 2});
+    left: 0;
+    display: block;
+    width: 100%;
+    height: $thickness;
+    border-radius: $thickness / 2;
+    background-color: $color;
+  }
+
+  &::before {
+    transform: rotate($deg);
+  }
+
+  &::after {
+    transform: rotate(90deg + $deg);
+  }
+}
+
+@mixin icon-cross-color ($color) {
+  &::before,
+  &::after {
+    background-color: $color;
+  }
+}
+
+@mixin icon-cross-deg ($deg) {
+  &::before {
+    transform: rotate($deg);
+  }
+
+  &::after {
+    transform: rotate(90deg + $deg);
+  }
+}

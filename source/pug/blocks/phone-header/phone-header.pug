@@ -1,0 +1,21 @@
+mixin phone-header(data)
+    +el({
+        tag: 'ul',
+        class: 'phone-header',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            li.phone-header__item
+                +el({
+                    tag: 'span',
+                    class: 'phone-header__descr',
+                    text: item.descr,
+                })
+                +el({
+                    tag: 'a',
+                    href: 'tel:' + item.href,
+                    class: 'phone-header__number',
+                    text: item.phone,
+                })

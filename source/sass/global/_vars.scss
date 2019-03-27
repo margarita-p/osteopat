@@ -1,0 +1,70 @@
+$fonts: (
+  primary: #{"Helvetica Neue", "Helvetica CY", "Pragmatica", "Roboto", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
+  monospace: #{"SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace},
+);
+
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  large: 1220px,
+);
+
+$pads: (
+  small: 20px,
+  medium: 30px,
+  large: 40px,
+);
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$colors: (
+  primary: #3599c4,
+  secondary: #077bad,
+  light: #eff5f3,
+  light-gray: #c9c9c6,
+  gray: #94a1a8,
+  dark-gray: #4a4a4a,
+  black: #353535,
+  white: #fff,
+  error: #d0021b,
+  disabled: #c9c9c6,
+);
+
+$heading-styles: (
+  small: (
+    h1: (fs: 28px, lh: 1.25, mb: 20px, fw: 700),
+    h2: (fs: 24px, lh: 1.2, mb: 20px, fw: 700),
+    h3: (fs: 18px, lh: 1.1, mb: 10px, fw: 700),
+    h4: (fs: 16px, lh: 1.2, mb: 8px,  fw: 700),
+    h5: (fs: 14px, lh: 1.3, mb: 8px,  fw: 500),
+    h6: (fs: 14px, lh: 1.4, mb: 6px,  fw: 400)
+  ),
+  medium: (
+    h1: (fs: 36px, mb: 30px),
+    h2: (fs: 30px, mb: 30px),
+    h3: (fs: 22px, mb: 14px),
+    h4: (fs: 20px, mb: 14px),
+    h5: (fs: 18px, mb: 14px),
+    h6: (fs: 16px, mb: 12px)
+  ),
+  large: (
+    h1: (fs: 48px, mb: 40px),
+    h2: (fs: 36px, mb: 40px),
+    h3: (fs: 24px, mb: 16px),
+    h4: (fs: 22px, mb: 14px),
+    h5: (fs: 18px, mb: 14px),
+    h6: (fs: 16px, mb: 12px)
+  ),
+);
+
+$durations: (
+  md: 0.3s,
+  lg: 0.6s,
+);
+
+$func: (
+  primary: cubic-bezier(0.25, 0.1, 0.25, 1),
+);
+
+$change-color: 10%;

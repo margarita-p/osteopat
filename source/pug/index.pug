@@ -1,0 +1,18 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Остеопрактика'
+    - var main = true
+    - var pageId = 1
+
+block content
+    main.content
+        +intro({
+            mix: 'content__block',
+        })
+
+
+    //-  +modal({
+        mod: 'price-order'
+        })
+            +price-order({})

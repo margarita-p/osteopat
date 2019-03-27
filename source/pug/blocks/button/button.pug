@@ -1,0 +1,22 @@
+mixin button(data)
+    +el({
+        tag: data.tag ? data.tag : 'button',
+        class: 'btn',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        type: data.type,
+        text: data.text,
+        before: data.before,
+        after: data.after,
+        target: data.target,
+    })&attributes(attributes)
+        if data.icon
+            +el({
+                tag: 'span',
+                class: 'btn__icon',
+            })
+                +el({
+                    tag: 'svg',
+                    icon: data.icon,
+                })

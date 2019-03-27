@@ -1,0 +1,30 @@
+.price-order__heading {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.price-order__text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.price-order__field-group {
+  margin-bottom: 24px;
+}
+
+.price-order__field {
+  margin-bottom: 18px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.price-order__submit {
+  width: 100%;
+  margin-bottom: 24px;
+}

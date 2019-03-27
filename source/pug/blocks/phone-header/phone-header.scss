@@ -1,0 +1,45 @@
+.phone-header {
+  @include list-none;
+}
+
+.phone-header__item {
+  font-weight: 500;
+}
+
+.phone-header__descr,
+.phone-header__number {
+  display: block;
+}
+
+.phone-header__descr {
+  color: color(primary);
+  font-size: 14px;
+}
+
+.phone-header__number {
+  font-size: 18px;
+  text-decoration: none;
+
+  span {
+    font-size: 14px
+  }
+}
+
+@include respond-to(large) {
+  .phone-header {
+    display: table;
+  }
+
+  .phone-header__item {
+    display: table-row;
+  }
+
+  .phone-header__descr {
+    padding-right: 10px;
+  }
+
+  .phone-header__descr,
+  .phone-header__number {
+    display: table-cell;
+  }
+}

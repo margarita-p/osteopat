@@ -1,0 +1,13 @@
+mixin form(data)
+    +el({
+        tag: 'form',
+        class: data.class,
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })(
+        action=data.action ? data.action : '/',
+        method=data.method ? data.method : 'post',
+        accept-charset='UTF-8'
+    )&attributes(attributes)
+        block

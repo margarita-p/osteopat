@@ -1,0 +1,173 @@
+.intro {
+  position: relative;
+  margin-top: 60px;
+  padding-top: 30px;
+}
+
+.intro__wrap {
+  @include wrapper;
+}
+
+.intro__top {
+  margin-bottom: 30px;
+}
+
+.intro__slogan {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.intro__video {
+  position: relative;
+  width: auto;
+  margin-right: - pads(small);
+  margin-bottom: 30px;
+  padding-left: 15%;
+}
+
+.intro__video-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.intro__list {
+}
+
+.intro__btn {
+  width: 100%;
+}
+
+@include respond-to(420px) {
+
+}
+
+@include respond-to(520px) {
+
+}
+
+@include respond-to(620px) {
+  .intro__video {
+    margin-left: 10%;
+  }
+}
+
+@include respond-to(medium) {
+  .intro {
+    margin-top: 84px;
+    padding-top: 0;
+  }
+
+  .intro__top {
+    position: relative;
+    min-height: $half-round-size-md;
+    margin-bottom: 40px;
+  }
+
+  .intro__slogan {
+    // width: 380px;
+    width: 50%;
+    margin-bottom: 40px;
+    padding-top: 60px;
+  }
+
+  .intro__video {
+    position: absolute;
+    top: 0;
+    right: - pads(medium);
+    // width: calc(100% - 400px + #{pads(medium)});
+    width: 50%;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-right: - pads(medium);
+
+    .picture {
+      transform: translate(-40px);
+    }
+  }
+
+  .intro__video-btn {
+    transform: translate(-30px, calc(-50% + 70px));
+  }
+
+  .intro__btn {
+    width: auto;
+    min-width: 290px;
+    margin-left: 80px;
+  }
+}
+
+@include respond-to(920px) {
+  .intro__video {
+    .picture {
+      transform: translate(0);
+    }
+  }
+}
+
+
+
+@include respond-to(large) {
+  .intro {
+    margin-top: 0;
+  }
+
+  .intro__top {
+    position: relative;
+    min-height: $half-round-size-lg;
+    margin-bottom: 20px;
+  }
+
+  .intro__slogan {
+    width: 560px;
+    margin-bottom: 40px;
+    padding-top: 80px;
+  }
+
+  .intro__video {
+    position: absolute;
+    top: 0;
+    left: 560px;
+    right: auto;
+    width: auto;
+    max-width: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    .picture {
+      transform: translate(-40px);
+    }
+  }
+
+  .intro__video-btn {
+    transform: translate(-50px, calc(-50% + 50px));
+  }
+
+  .intro__btn {
+    margin-left: 130px;
+  }
+
+  .intro__list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: 0 -5px;
+    margin-top: -190px;
+
+    .list__item {
+      width: calc(50% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@include respond-to(1400px) {
+  .intro__video {
+    .picture {
+      transform: translate(0);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@mixin wrapper {
+  padding-left: pads(small);
+  padding-right: pads(small);
+
+  @include respond-to(medium) {
+    padding-left: pads(medium);
+    padding-right: pads(medium);
+  }
+
+  @include respond-to(large) {
+    width: breakpoints(large);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: pads(large);
+    padding-right: pads(large);
+  }
+}

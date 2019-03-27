@@ -1,0 +1,10 @@
+mixin picture(data)
+    +el({
+        tag: 'picture',
+        class: 'picture',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })
+        source(srcset='./assets/images/' + data.image + '.webp' type='image/webp')
+        img(src='./assets/images/' + data.image + '.' + data.imageExp  alt=data.alt ? data.alt : '')

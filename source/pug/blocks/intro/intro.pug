@@ -1,0 +1,42 @@
+mixin intro(data)
+    +el({
+        class: 'intro',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .intro__wrap
+            .intro__top
+                +slogan({
+                    mix: 'intro__slogan',
+                    heading: 'Позвольте <span class="slogan__primary">Здоровью наполнить</span> Вашу&nbsp;жизнь',
+                    subheading: '<b>Остеопрактика</b>&nbsp;&mdash; это новый этап оздоровительных технологий'
+                })
+                .intro__video
+                    +half-round({
+                        mix: 'intro__video-half-round',
+                        mod: 'left',
+                        image: 'person',
+                        imageExp: 'jpg',
+                        alt: 'Фотография доктора'
+                    })
+                    +button-video({
+                        mix: 'intro__video-btn'
+                    })
+                +button({
+                    mix: 'intro__btn',
+                    mod: 'bg-primary',
+                    text: 'Записаться на приём'
+                })
+            +list({
+                mix: 'intro__list',
+                items: [
+                    'Мягкий и&nbsp;безопасный метод воздействия на&nbsp;тело человека',
+                    'Восстанавливается отток и&nbsp;приток крови к&nbsp;головному мозгу и&nbsp;другим органам',
+                    'Остеопрактика приятна и&nbsp;полезна Повышается работоспособность',
+                    'Остеопатия&nbsp;&mdash; путь к&nbsp;здоровью',
+                ]
+            })
+            +button-down({
+                mix: 'intro__btn-down'
+            })

@@ -1,0 +1,31 @@
+mixin intro-features(data)
+    +el({
+        tag: 'ul',
+        class: 'intro-features',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            +el({
+                tag: 'li',
+                class: 'intro-features__item',
+            })
+                +el({
+                    tag: 'svg',
+                    icon: item.icon,
+                    class: 'intro-features__icon',
+                })
+                +el({
+                    class: 'intro-features__text',
+                })
+                    +el({
+                        tag: 'span',
+                        class: 'intro-features__main-text',
+                        text: item.mainText
+                    })
+                    +el({
+                        tag: 'span',
+                        class: 'intro-features__sub-text',
+                        text: item.subText
+                    })

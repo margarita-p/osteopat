@@ -1,0 +1,64 @@
+body,
+html {
+  position: relative;
+  width: 100%;
+  min-width: breakpoints(small);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: color(white);
+  color: color(black);
+  font-family: font(primary);
+  font-size: 16px;
+  line-height: 1.4;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+input,
+textarea,
+select,
+button {
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+a {
+  text-decoration: underline;
+
+  @include hover {
+    text-decoration: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}

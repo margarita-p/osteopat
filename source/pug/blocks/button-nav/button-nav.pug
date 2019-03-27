@@ -1,0 +1,17 @@
+mixin button-nav(data)
+    +el({
+        tag: 'button',
+        class: 'button-nav',
+        mix: data.mix,
+        js: data.js,
+        mod: data.mod,
+        ariaLabel: 'Открыть меню',
+    })&attributes(attributes)
+        +el({
+            tag: 'span',
+            class: 'button-nav__icon'
+        })
+            +el({
+                tag: 'span',
+                class: 'button-nav__icon-items'
+            })

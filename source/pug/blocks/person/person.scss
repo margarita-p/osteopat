@@ -1,0 +1,25 @@
+.person {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.person__prof {
+  color: color(primary);
+}
+
+.person__last-name,
+.person__first-name {
+  display: inline-block;
+}
+
+.person__last-name {
+  text-transform: uppercase;
+}
+
+@include respond-to(large) {
+  .person__last-name,
+  .person__first-name {
+    display: block;
+  }
+}

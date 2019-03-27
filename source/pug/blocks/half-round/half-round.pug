@@ -1,0 +1,13 @@
+mixin half-round(data)
+    +el({
+        class: 'half-round',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +picture({
+            mix: 'half-round__picture',
+            image: data.image,
+            imageExp: data.imageExp,
+            alt: data.alt
+        })

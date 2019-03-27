@@ -1,0 +1,36 @@
+// fonts
+@import "../assets/fonts/helvetica-neue-cyr/helvetica-neue-cyr";
+
+// global
+@import "./global/vars";
+@import "./global/functions";
+@import "./mixins/mixins";
+@import "./global/base";
+@import "./global/typography";
+@import "./blocks/hidden";
+@import "./blocks/sticky-footer";
+@import "./blocks/content";
+
+// blocks
+@import "../pug/blocks/button/button";
+@import "../pug/blocks/button-nav/button-nav";
+@import "../pug/blocks/button-remove/button-remove";
+@import "../pug/blocks/button-video/button-video";
+@import "../pug/blocks/button-down/button-down";
+@import "../pug/blocks/field/field";
+@import "../pug/blocks/checkbox/checkbox";
+@import "../pug/blocks/list/list";
+@import "../pug/blocks/overlay/overlay";
+@import "../pug/blocks/logo/logo";
+@import "../pug/blocks/main-nav/main-nav";
+@import "../pug/blocks/phone-header/phone-header";
+@import "../pug/blocks/header/header";
+@import "../pug/blocks/half-round/half-round";
+@import "../pug/blocks/intro/intro";
+@import "../pug/blocks/slogan/slogan";
+@import "../pug/blocks/intro-features/intro-features";
+@import "../pug/blocks/price-order/price-order";
+@import "../pug/blocks/modal/modal";
+@import "../pug/blocks/picture/picture";
+@import "../pug/blocks/person/person";
+@import "../pug/blocks/circle/circle";

@@ -1,0 +1,62 @@
+mixin main-nav(data)
+    -var classMainNav = 'main-nav'
+    -var className = data.class ? data.class : classMainNav
+    -var active = ''
+
+    +el({
+        tag: 'ul',
+        class: className,
+        mod: data.mod,
+        mix: data.mix
+    })&attributes(attributes)
+        if data.line
+            +el({
+                tag: 'li',
+                class: className + '__item',
+                mod: 'line',
+            })
+        each item, index in data.items
+            //- если нет следующего уровня последний параметр равен item иначе ''
+            if pageId && index == pageId - 1
+                -var active = ' active'
+            else
+                -var active = ''
+            +mainNavItem(className, item, item, active)
+                if item.lvl
+                    - var lvl = item.lvl.lvl
+                    +el({
+                        tag: 'ul',
+                        class: className + '__lvl-' + lvl,
+                    })
+                        each itemInner in item.lvl.items
+                            +mainNavItem(className, itemInner, itemInner)
+
+mixin mainNavItem(classItemMainNav, data, item, active)
+    +el({
+        tag: 'li',
+        class: classItemMainNav + '__item' + active,
+        mod: data.mod,
+        mix: data.mix,
+    })
+        +el({
+            tag: data.tag ? data.tag : 'a',
+            href: data.href,
+            type: data.type,
+            class: data.class ? data.class : classItemMainNav + '__link',
+            title: data.title,
+            text: item ? item : data.text,
+            before: data.before,
+            after: data.after
+        })
+            //-если есть иконка
+            if data.icon
+                i(class = classItemMainNav + '__icon')
+                    +el({
+                        tag: 'svg',
+                        icon: data.icon,
+                        width: '20',
+                        height: '20',
+                        before: data.iconBefore,
+                        before: data.iconAfter,
+                    })
+            block

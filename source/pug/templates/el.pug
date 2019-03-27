@@ -1,0 +1,87 @@
+mixin el(data)
+    - elMods = ''
+    - elAttr = ''
+    - var elMix = data.mix ? ' ' + data.mix : ''
+    - var elClass = data.class ? data.class : ''
+    - var elTag = data.tag ? data.tag : 'div'
+    - var elJs = data.js ? ' js-' + data.js : ''
+    - var elAnimate = ''
+    - var elXlink = data.xlink ? data.xlink : './assets/sprites/svg/sprite.svg'
+
+    //- для модификаторов
+    if data && data.mod && typeof data.mod == 'object'
+        each mod in data.mod
+            - elMods += ' ' + data.class + '--' + mod
+    else if data && data.mod && typeof data.mod == 'string'
+        - elMods += ' ' + data.class + '--' + data.mod
+    //- href по умолчанию '#'
+    if data.tag == 'a'
+        - elAttr = data.href ? {href: data.href} : {href: '#'}
+    //- если ссылка без href
+    if data.href == 'none'
+        - elAttr = ''
+    //-  alt по умолчанию ' '
+    if data.tag == 'img'
+        - elAttr = data.alt ? {alt: data.alt} : {alt: ' '}
+        - var elSrc = './assets/images/'
+    //- type по умолчанию 'button'
+    if data.tag == 'button'
+        - elAttr = data.type ? {type: data.type} : {type: 'button'}
+    //- type по умолчанию 'text'
+    if data.tag == 'input'
+        - elAttr = data.type ? {type: data.type} : {type: 'text'}
+    //-добовляем 'for'
+        if data.tag == 'label'
+            - elAttr = {for: data.id}
+    //- убираем лишний пробел если нет data.class
+    if !data.class
+        - var elMix = data.mix ? data.mix : ''
+    if data.animate == 'toTop'
+        - var elAnimate = ' animate animate--to-top'
+    else if data.animate == 'toBottom'
+        - var elAnimate = ' animate animate--to-bottom'
+    else if data.animate == 'toRight'
+        - var elAnimate = ' animate animate--to-right'
+    else if data.animate == 'toLeft'
+        - var elAnimate = ' animate animate--to-left'
+    else if data.animate == 'fadeIn'
+        - var elAnimate = ' animate animate--fade-in'
+    else if data.animate == 'fadeOut'
+        - var elAnimate = ' animate animate--fade-out'
+
+    #{elTag}(
+            class = elClass + elMods + elMix + elJs + elAnimate,
+            id = data.id,
+            src = data.src ? elSrc + data.src : none,
+            aria-label = data.ariaLabel,
+            title = data.title,
+            target = data.target,
+            tabindex = data.tabindex,
+            width = data.tag == 'svg' ? '20' : data.width,
+            height = data.tag == 'svg' ? '20' : data.height,
+            placeholder = data.placeholder,
+            name = data.name,
+            value = data.value,
+            pattern = data.pattern,
+            required = data.required,
+            readonly = data.readonly,
+            checked = data.checked,
+            for = data.for,
+            min = data.min,
+            max = data.max,
+        )&attributes(elAttr)&attributes(attributes)
+        if data.tag && data.tag == 'svg'
+            use(xlink:href = elXlink + '#' + data.icon)
+        if data.position && data.position == 'before'
+            block
+            | !{data.text}
+        else if data.position && data.position == 'after'
+            | !{data.text}
+            block
+        else
+            if data.before
+                +el(data.before)
+            | !{data.text}
+            if data.after
+                +el(data.after)
+            block

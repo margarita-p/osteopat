@@ -1,0 +1,43 @@
+/* stylelint-disable */
+@mixin ofi ($fit: fill, $position: null) {
+  -o-object-fit: $fit;
+  object-fit: $fit;
+
+  @if $position {
+    -o-object-position: $position;
+    object-position: $position;
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  }
+
+  @else {
+    font-family: 'object-fit: #{$fit}';
+  }
+}
+
+@mixin ofi-contain {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(contain);
+}
+
+@mixin ofi-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(cover, left);
+}
+
+@mixin ofi-cover-center {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(cover, center);
+}
+
+@mixin ofi-contain-center {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(contain, center);
+}

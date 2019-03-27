@@ -1,0 +1,18 @@
+mixin modal(data)
+    +el({
+        class: 'modal',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +overlay({
+            mix: 'active',
+            mod: 'modal'
+        })
+        +el({
+            mix: 'modal__content',
+        })
+            +button-remove({
+                mix: 'modal__close'
+            })
+            block

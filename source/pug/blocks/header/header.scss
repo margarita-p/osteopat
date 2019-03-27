@@ -1,0 +1,150 @@
+.header {
+  position: fixed;
+  z-index: 10;
+
+  .overlay {
+    z-index: -2;
+  }
+}
+
+.header__wrap {
+  @include wrapper;
+  background-color: color(white);
+  box-shadow: 0 0 5px 0 rgba(#000, 0.3);
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__person {
+  display: none;
+}
+
+.header__phone {
+  &--desk {
+    display: none;
+  }
+
+  &--mob {
+    margin-top: auto;
+    padding: 0 30px;
+  }
+}
+
+.header__button-nav {
+  margin-left: 20px;
+}
+
+.header__main-nav {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  z-index: -1;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: calc(100vh - 60px);
+  padding: 20px 0;
+  background-color: color(white);
+  overflow-y: scroll;
+  transition: 0.3s;
+
+  .main-nav {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid color(light-gray);
+  }
+
+  &.active {
+    transform: translateX(0%);
+  }
+}
+
+@include respond-to(medium) {
+  .header__top {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .header__logo {
+    margin-right: 50px;
+  }
+
+  .header__person {
+    display: block;
+    margin-right: auto;
+  }
+}
+
+@include respond-to(large) {
+  .header {
+    position: static;
+    overflow-x: hidden;
+  }
+
+  .header__wrap {
+    box-shadow: none;
+  }
+
+  .header__top {
+    padding: 15px 0;
+  }
+
+  .header__phone {
+    &--desk {
+      display: block;
+    }
+
+    &--mob {
+      display: none;
+    }
+  }
+
+  .header__button-nav {
+    display: none;
+  }
+
+  .header__main-nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: 1;
+    transform: translate(0);
+    width: auto;
+    height: auto;
+    margin: 0 -10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow-y: visible;
+    transition: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -1000px;
+      right: -1000px;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      background-color: color(light);
+      background-image: linear-gradient(90deg, rgba(color(white), 0.3), rgba(color(white), 0.5) 20%, transparent);
+    }
+
+    .main-nav {
+      margin: 0;
+      padding: 0;
+      border-bottom: none;
+    }
+  }
+}
