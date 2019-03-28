@@ -6,6 +6,10 @@
   @include wrapper;
 }
 
+.problems__heading {
+  font-size: 24px;
+}
+
 .problems__image {
   margin-left: - pads(small);
   margin-bottom: 30px;
@@ -41,6 +45,7 @@
   }
 
   .problems__heading {
+    font-size: 32px;
     transform: translate(-50px);
   }
 
@@ -60,6 +65,7 @@
   }
 
   .problems__heading {
+    font-size: 36px;
     transform: translate(-100px);
   }
 

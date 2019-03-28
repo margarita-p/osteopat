@@ -1,0 +1,55 @@
+.content-form__field-group {
+  margin-bottom: 35px;
+}
+
+.content-form__field {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content-form__personal,
+.content-form__submit {
+  text-align: center;
+}
+
+.content-form__personal {
+  margin-bottom: 30px;
+}
+
+.content-form__submit {
+  .btn {
+    width: 100%;
+    max-width: 290px;
+  }
+}
+
+@include respond-to(medium) {
+  .content-form__field-group {
+    margin-bottom: 55px;
+  }
+
+  .content-form__field {
+    margin-bottom: 22px;
+  }
+
+  .content-form__personal {
+    margin-bottom: 40px;
+  }
+}
+
+@include respond-to(large) {
+  .content-form__field-group {
+    margin-bottom: 55px;
+  }
+
+  .content-form__field {
+    margin-bottom: 32px;
+  }
+
+  .content-form__personal {
+    margin-bottom: 50px;
+  }
+}

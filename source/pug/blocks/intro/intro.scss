@@ -1,7 +1,7 @@
 .intro {
   position: relative;
   margin-top: 60px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .intro__wrap {
@@ -14,14 +14,14 @@
 
 .intro__slogan {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .intro__video {
   position: relative;
   width: auto;
   margin-right: - pads(small);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-left: 15%;
 }
 
@@ -37,14 +37,6 @@
 
 .intro__btn {
   width: 100%;
-}
-
-@include respond-to(420px) {
-
-}
-
-@include respond-to(520px) {
-
 }
 
 @include respond-to(620px) {
@@ -66,8 +58,8 @@
   }
 
   .intro__slogan {
-    // width: 380px;
-    width: 50%;
+    width: 55%;
+    max-width: 580px;
     margin-bottom: 40px;
     padding-top: 60px;
   }
@@ -76,7 +68,6 @@
     position: absolute;
     top: 0;
     right: - pads(medium);
-    // width: calc(100% - 400px + #{pads(medium)});
     width: 50%;
     margin-bottom: 0;
     padding-left: 0;
@@ -105,8 +96,6 @@
     }
   }
 }
-
-
 
 @include respond-to(large) {
   .intro {

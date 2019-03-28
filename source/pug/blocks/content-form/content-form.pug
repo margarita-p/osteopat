@@ -1,0 +1,48 @@
+mixin content-form(data)
+    +form({
+        class: 'content-form',
+    })
+        .content-form__field-group
+            if data.userName
+                +field({
+                    mix: 'content-form__field',
+                    icon: 'user',
+                    mod: 'icon',
+                    label: 'Имя пользователя',
+                    required: true,
+                    placeholder: 'Имя'
+                })
+            if data.email
+                +field({
+                    mix: 'content-form__field',
+                    icon: 'email',
+                    mod: 'icon',
+                    label: 'E-mail',
+                    type: 'email',
+                    required: true,
+                    placeholder: 'E-mail'
+                })
+            if data.message
+                +field({
+                    tag: 'textarea',
+                    mix: 'content-form__field',
+                    icon: 'message',
+                    mod: 'icon',
+                    label: 'Вопрос',
+                    type: 'email',
+                    required: true,
+                    placeholder: data.message.placeholder
+                })
+        if data.personalData
+            .content-form__personal
+                +checkbox({
+                    mod: 'small',
+                    label: 'Согласие на обработку персональных данных',
+                    required: true,
+                })
+        .content-form__submit
+            +button({
+                mod: 'bg-primary',
+                type: 'submit',
+                text: data.submit
+            })

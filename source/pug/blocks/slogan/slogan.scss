@@ -1,5 +1,6 @@
 .slogan {
   font-size: 24px;
+  font-weight: 700;
 }
 
 .slogan__subheading {
@@ -27,7 +28,7 @@
 
 @include respond-to(420px) {
   .slogan {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .slogan__subheading {
@@ -35,19 +36,9 @@
   }
 }
 
-@include respond-to(520px) {
-  .slogan {
-    font-size: 32px;
-  }
-
-  .slogan__subheading {
-    font-size: 19px;
-  }
-}
-
 @include respond-to(medium) {
   .slogan {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .slogan__subheading {
@@ -63,12 +54,6 @@
 
   .slogan__primary {
     color: color(primary);
-  }
-}
-
-@include respond-to(medium) {
-  .slogan {
-    font-size: 32px;
   }
 }
 

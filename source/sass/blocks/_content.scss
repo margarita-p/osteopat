@@ -3,25 +3,31 @@
 }
 
 .content__section {
-  margin-bottom: 20px;
+  &--intro,
+  &--problems {
+    margin-bottom: 40px;
+  }
 
-  &:last-of-type {
+  &--reception,
+  &--bio {
     margin-bottom: 0;
   }
 }
 
-.content__heading {
-  margin-bottom: 40px;
-}
-
 @include respond-to(medium) {
   .content__section {
-    margin-bottom: 40px;
+    &--intro,
+    &--problems {
+      margin-bottom: 50px;
+    }
   }
 }
 
 @include respond-to(large) {
   .content__section {
-    margin-bottom: 60px;
+    &--intro,
+    &--problems {
+      margin-bottom: 60px;
+    }
   }
 }

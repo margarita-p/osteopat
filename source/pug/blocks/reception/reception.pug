@@ -1,0 +1,42 @@
+mixin reception(data)
+    +el({
+        tag: 'section',
+        class: 'reception',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .reception__wrap
+            .reception__text-wrap
+                h2.reception__heading
+                    | Остеопатия&nbsp;&mdash; <span>вектор здоровья</span>
+                .reception__text
+                    p.
+                        Благодаря специальным техникам остеопрактика
+                        улучшает состояние и&nbsp;работу мышц, тканей, оболочек,
+                        что позволяет восстановить состояние всех систем тела:
+                +list({
+                    mix: 'reception__list',
+                    mod: ['style-stroke', 'item-mb-auto'],
+                    items: [
+                        'Позвоночника',
+                        'Суставов',
+                        'Внутренних органов',
+                        'Нервной системы',
+                        'Гормональной системы',
+                        'Кровеносной системы',
+                    ]
+                })
+            +card-form({
+                mix: 'reception__card-form',
+                heading: 'Записаться на <br>приём к&nbsp;остеопракту'
+            })
+                +content-form({
+                    userName: true,
+                    email: true,
+                    message: {
+                        placeholder: 'Вопрос',
+                    },
+                    personalData: true,
+                    submit: 'Отправить',
+                })

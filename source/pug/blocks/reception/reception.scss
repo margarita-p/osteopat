@@ -1,0 +1,97 @@
+.reception {
+  background-color: color(primary);
+  color: color(white);
+}
+
+.reception__wrap {
+  display: flex;
+  flex-direction: column;
+  @include wrapper;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.reception__text-wrap {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.reception__text {
+  margin-bottom: 15px;
+
+  p {
+    color: inherit;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.reception__heading {
+  color: inherit;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+
+  span {
+    font-weight: 400;
+    text-transform: none;
+  }
+}
+
+.reception__list {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+@include respond-to(medium) {
+  .reception__wrap {
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .reception__text-wrap {
+    width: 40%;
+    max-width: 450px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .reception__heading {
+    font-size: 40px;
+  }
+
+  .reception__text {
+    margin-bottom: 20px;
+  }
+
+  .reception__card-form {
+    flex-grow: 1;
+    width: 50%;
+    max-width: 490px;
+    margin-top: -48px;
+    margin-left: auto;
+    margin-bottom: -48px;
+  }
+}
+
+@include respond-to(large) {
+  .reception__wrap {
+    height: 600px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .reception__heading {
+    font-size: 48px;
+  }
+
+  .reception__card-form {
+    margin-top: -68px;
+    margin-bottom: -58px;
+  }
+}

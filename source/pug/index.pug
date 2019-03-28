@@ -8,10 +8,16 @@ block vars
 block content
     main.content
         +intro({
-            mix: 'content__section',
+            mix: 'content__section content__section--intro',
         })
         +problems({
-            mix: 'problems__section',
+            mix: 'content__section content__section--problems',
+        })
+        +reception({
+            mix: 'content__section content__section--reception',
+        })
+        +bio({
+            mix: 'content__section content__section--bio',
         })
 
 

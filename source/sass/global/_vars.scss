@@ -33,26 +33,26 @@ $colors: (
 
 $heading-styles: (
   small: (
-    h1: (fs: 28px, lh: 1.25, mb: 20px, fw: 700),
-    h2: (fs: 24px, lh: 1.2, mb: 20px, fw: 400),
-    h3: (fs: 18px, lh: 1.1, mb: 10px, fw: 700),
-    h4: (fs: 16px, lh: 1.2, mb: 8px,  fw: 700),
-    h5: (fs: 14px, lh: 1.3, mb: 8px,  fw: 500),
-    h6: (fs: 14px, lh: 1.4, mb: 6px,  fw: 400)
+    h1: (fs: 24px, lh: 1.3, mb: 18px, fw: 400),
+    h2: (fs: 20px, lh: 1.3, mb: 18px, fw: 400),
+    h3: (fs: 18px, lh: 1.4, mb: 10px, fw: 700),
+    h4: (fs: 16px, lh: 1.5, mb: 8px,  fw: 700),
+    h5: (fs: 14px, lh: 1.5, mb: 8px,  fw: 700),
+    h6: (fs: 14px, lh: 1.5, mb: 6px,  fw: 400)
   ),
   medium: (
-    h1: (fs: 36px, mb: 30px),
-    h2: (fs: 30px, mb: 30px),
-    h3: (fs: 22px, mb: 14px),
-    h4: (fs: 20px, mb: 14px),
-    h5: (fs: 18px, mb: 14px),
+    h1: (fs: 30px, mb: 24px),
+    h2: (fs: 24px, mb: 24px),
+    h3: (fs: 20px, mb: 14px),
+    h4: (fs: 18px, mb: 14px),
+    h5: (fs: 16px, mb: 14px),
     h6: (fs: 16px, mb: 12px)
   ),
   large: (
-    h1: (fs: 48px, mb: 40px),
-    h2: (fs: 36px, mb: 40px),
+    h1: (fs: 36px, mb: 30px),
+    h2: (fs: 30px, mb: 30px),
     h3: (fs: 24px, mb: 16px),
-    h4: (fs: 22px, mb: 14px),
+    h4: (fs: 20px, mb: 14px),
     h5: (fs: 18px, mb: 14px),
     h6: (fs: 16px, mb: 12px)
   ),

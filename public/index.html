@@ -146,7 +146,7 @@
       </div>
     </header>
     <main class="content">
-      <section class="intro content__section">
+      <section class="intro content__section content__section--intro">
         <div class="intro__wrap">
           <div class="intro__top">
             <h1 class="slogan intro__slogan">Позвольте <span class="slogan__primary">Здоровью наполнить</span> Вашу&nbsp;жизнь
@@ -169,7 +169,7 @@
             <button class="btn btn--bg-primary intro__btn" type="button">Записаться на приём
             </button>
           </div>
-          <ul class="list intro__list">
+          <ul class="list list--style-border intro__list">
             <li class="list__item">Мягкий и&nbsp;безопасный метод воздействия на&nbsp;тело человека
             </li>
             <li class="list__item">Восстанавливается отток и&nbsp;приток крови к&nbsp;головному мозгу и&nbsp;другим органам
@@ -183,7 +183,7 @@
           </button>
         </div>
       </section>
-      <section class="problems problems__section">
+      <section class="problems content__section content__section--problems">
         <div class="problems__wrap">
           <div class="half-round half-round--lg half-round--right-lg problems__image">
             <picture class="picture half-round__picture">
@@ -192,7 +192,7 @@
           </div>
           <div class="problems__text">
             <h2 class="problems__heading">Проблемы, которые решает остеопрактика</h2>
-            <ul class="list problems__list">
+            <ul class="list list--style-border problems__list">
               <li class="list__item">Головные боли
               </li>
               <li class="list__item">Частые головокружения
@@ -226,6 +226,112 @@
             </ul>
             <button class="btn btn--bg-primary problems__btn" type="button">Записаться на приём
             </button>
+          </div>
+        </div>
+      </section>
+      <section class="reception content__section content__section--reception">
+        <div class="reception__wrap">
+          <div class="reception__text-wrap">
+            <h2 class="reception__heading">Остеопатия&nbsp;&mdash; <span>вектор здоровья</span></h2>
+            <div class="reception__text">
+              <p>
+                Благодаря специальным техникам остеопрактика
+                улучшает состояние и&nbsp;работу мышц, тканей, оболочек,
+                что позволяет восстановить состояние всех систем тела:
+              </p>
+            </div>
+            <ul class="list list--style-stroke list--item-mb-auto reception__list">
+              <li class="list__item">Позвоночника
+              </li>
+              <li class="list__item">Суставов
+              </li>
+              <li class="list__item">Внутренних органов
+              </li>
+              <li class="list__item">Нервной системы
+              </li>
+              <li class="list__item">Гормональной системы
+              </li>
+              <li class="list__item">Кровеносной системы
+              </li>
+            </ul>
+          </div>
+          <div class="card-form reception__card-form">
+            <h3 class="card-form__heading">Записаться на <br>приём к&nbsp;остеопракту
+            </h3>
+            <form class="content-form" action="/" method="post" accept-charset="UTF-8">
+              <div class="content-form__field-group">
+                <label class="field field--icon content-form__field">
+                  <span class="hidden">Имя пользователя
+                  </span>
+                  <span class="field__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
+                    </svg>
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Имя" required type="text">
+                </label>
+                <label class="field field--icon content-form__field">
+                  <span class="hidden">E-mail
+                  </span>
+                  <span class="field__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#email"></use>
+                    </svg>
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="E-mail" required type="email">
+                </label>
+                <label class="field field--icon content-form__field">
+                  <span class="hidden">Вопрос
+                  </span>
+                  <span class="field__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#message"></use>
+                    </svg>
+                  </span>
+                  <textarea class="field__input" tabindex="0" placeholder="Вопрос" required>
+                  </textarea>
+                </label>
+              </div>
+              <div class="content-form__personal">
+                <label class="checkbox checkbox--small">
+                  <input class="hidden checkbox__input" required type="checkbox">
+                  <span class="checkbox__label">Согласие на обработку персональных данных
+                  </span>
+                </label>
+              </div>
+              <div class="content-form__submit">
+                <button class="btn btn--bg-primary" type="submit">Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="bio content__section content__section--bio">
+        <div class="bio__wrap">
+          <div class="bio__text-wrap">
+            <h2 class="bio__heading">Биологическое центрирование</h2>
+            <div class="bio__text">
+              <p class="bio__large-text">Помощь при:</p>
+              <ul class="list list--style-border bio__list">
+                <li class="list__item">психосоматических расстройствах <span>(нарушение сна, хроническая усталость, апатия, негативы, раздражительность, стрессы)</span>
+                </li>
+                <li class="list__item">чувстве вины
+                </li>
+                <li class="list__item">обидах
+                </li>
+                <li class="list__item">сложностях в отношениях
+                </li>
+                <li class="list__item">проблемах с выбором
+                </li>
+                <li class="list__item">психотравмах
+                </li>
+                <li class="list__item">межличностных отношениях
+                </li>
+                <li class="list__item">беспокойстве о прошлом и будущем
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

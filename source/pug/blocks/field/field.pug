@@ -8,6 +8,20 @@ mixin field(data)
             js: data.js,
         })
             +el({
+                tag: 'span',
+                class: data.isLabel ? 'field__label' : 'hidden',
+                text: data.label,
+            })
+            if data.icon
+                +el({
+                    tag: 'span',
+                    class: 'field__icon',
+                    after: {
+                        tag: 'svg',
+                        icon: data.icon,
+                    }
+                })
+            +el({
                 tag: data.tag ? data.tag : 'input',
                 class: 'field__input',
                 type: data.type,
@@ -21,17 +35,3 @@ mixin field(data)
                 min: data.min,
                 max: data.max,
             })&attributes(attributes)
-            if data.icon
-                +el({
-                    tag: 'span',
-                    class: 'field__icon',
-                    after: {
-                        tag: 'svg',
-                        icon: data.icon,
-                    }
-                })
-            +el({
-                tag: 'span',
-                class: data.isLabel ? 'field__label' : 'hidden',
-                text: data.label,
-            })

@@ -1,0 +1,38 @@
+.card-form {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: color(white);
+  box-shadow: 5px 5px 32px 0 rgba(#353535, 0.5);
+}
+
+.card-form__heading {
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.card-form__heading {
+  font-size: 20px;
+}
+
+@include respond-to(medium) {
+  .card-form {
+    padding: 40px;
+  }
+
+  .card-form__heading {
+    margin-bottom: 36px;
+    font-size: 24px;
+  }
+}
+
+@include respond-to(large) {
+  .card-form {
+    padding: 60px;
+  }
+
+  .card-form__heading {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+}
