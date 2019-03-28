@@ -9,6 +9,7 @@ mixin content-form(data)
                     icon: 'user',
                     mod: 'icon',
                     label: 'Имя пользователя',
+                    name: 'userName',
                     required: true,
                     placeholder: 'Имя'
                 })
@@ -19,8 +20,20 @@ mixin content-form(data)
                     mod: 'icon',
                     label: 'E-mail',
                     type: 'email',
+                    name: 'email',
                     required: true,
                     placeholder: 'E-mail'
+                })
+            if data.phone
+                +field({
+                    mix: 'content-form__field',
+                    icon: 'phone',
+                    mod: 'icon',
+                    label: 'Телефон',
+                    type: 'tel',
+                    name: 'phone',
+                    required: true,
+                    placeholder: 'Телефон'
                 })
             if data.message
                 +field({
@@ -30,6 +43,7 @@ mixin content-form(data)
                     mod: 'icon',
                     label: 'Вопрос',
                     type: 'email',
+                    name: 'message',
                     required: true,
                     placeholder: data.message.placeholder
                 })

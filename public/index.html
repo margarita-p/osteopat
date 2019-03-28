@@ -268,7 +268,7 @@
                       <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
                     </svg>
                   </span>
-                  <input class="field__input" tabindex="0" placeholder="Имя" required type="text">
+                  <input class="field__input" tabindex="0" placeholder="Имя" name="userName" required type="text">
                 </label>
                 <label class="field field--icon content-form__field">
                   <span class="hidden">E-mail
@@ -278,7 +278,7 @@
                       <use xlink:href="./assets/sprites/svg/sprite.svg#email"></use>
                     </svg>
                   </span>
-                  <input class="field__input" tabindex="0" placeholder="E-mail" required type="email">
+                  <input class="field__input" tabindex="0" placeholder="E-mail" name="email" required type="email">
                 </label>
                 <label class="field field--icon content-form__field">
                   <span class="hidden">Вопрос
@@ -288,7 +288,7 @@
                       <use xlink:href="./assets/sprites/svg/sprite.svg#message"></use>
                     </svg>
                   </span>
-                  <textarea class="field__input" tabindex="0" placeholder="Вопрос" required>
+                  <textarea class="field__input" tabindex="0" placeholder="Вопрос" name="message" required>
                   </textarea>
                 </label>
               </div>
@@ -332,6 +332,62 @@
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="principles content__section content__section--principles">
+        <div class="principles__wrap">
+          <div class="principles__text-wrap">
+            <h2 class="principles__heading"><span class="principles__large-heading">ТОП 10</span>
+              основных<br>принципов остеопатии<span class="principles__sub-heading">от основателя метода<br>Эндрю Тейлора Стилла</span>
+            </h2>
+          </div>
+          <div class="card-form principles__card-form">
+            <form class="content-form" action="/" method="post" accept-charset="UTF-8">
+              <div class="content-form__field-group">
+                <label class="field field--icon content-form__field">
+                  <span class="hidden">Имя пользователя
+                  </span>
+                  <span class="field__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
+                    </svg>
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Имя" name="userName" required type="text">
+                </label>
+                <label class="field field--icon content-form__field">
+                  <span class="hidden">E-mail
+                  </span>
+                  <span class="field__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#email"></use>
+                    </svg>
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="E-mail" name="email" required type="email">
+                </label>
+                <label class="field field--icon content-form__field">
+                  <span class="hidden">Телефон
+                  </span>
+                  <span class="field__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#phone"></use>
+                    </svg>
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Телефон" name="phone" required type="tel">
+                </label>
+              </div>
+              <div class="content-form__personal">
+                <label class="checkbox checkbox--small">
+                  <input class="hidden checkbox__input" required type="checkbox">
+                  <span class="checkbox__label">Согласие на обработку персональных данных
+                  </span>
+                </label>
+              </div>
+              <div class="content-form__submit">
+                <button class="btn btn--bg-primary" type="submit">Получить бесплатно
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>

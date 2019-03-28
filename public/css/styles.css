@@ -1004,12 +1004,6 @@ body > *
 {
     color: #353535;
 }
-.field__input:hover,
-.field__input:focus,
-.field__input.active
-{
-    border: 1px solid #94a1a8;
-}
 .field__input--error:not(:focus)
 {
     color: #d0021b; 
@@ -2990,5 +2984,127 @@ body > *
     .bio__large-text
     {
         font-size: 24px;
+    }
+}
+
+.principles
+{
+    color: #fff; 
+    background-color: #3599c4;
+}
+
+.principles__wrap
+{
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 20px; 
+    padding-left: 20px;
+}
+@media (min-width: 768px)
+{
+    .principles__wrap
+    {
+        padding-right: 30px; 
+        padding-left: 30px;
+    }
+}
+@media (min-width: 1220px)
+{
+    .principles__wrap
+    {
+        width: 1220px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 40px; 
+        padding-left: 40px;
+    }
+}
+
+.principles__heading
+{
+    font-size: 28px;
+    font-weight: 900;
+
+    text-transform: uppercase; 
+
+    color: inherit;
+}
+
+.principles__large-heading
+{
+    font-size: 40px;
+}
+
+.principles__sub-heading
+{
+    font-size: 25px; 
+    font-weight: 700;
+
+    display: block;
+
+    margin-top: 6px;
+
+    text-transform: none;
+
+    color: #353535;
+}
+
+@media (min-width: 768px)
+{
+    .principles__wrap
+    {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .principles__text-wrap
+    {
+        max-width: 720px;
+    }
+    .principles__heading
+    {
+        font-size: 40px;
+    }
+    .principles__large-heading
+    {
+        font-size: 52px;
+    }
+    .principles__sub-heading
+    {
+        font-size: 37px; 
+
+        margin-top: 8px;
+    }
+    .principles__card-form
+    {
+        max-width: 490px;
+        margin-bottom: -48px;
+    }
+}
+
+@media (min-width: 1220px)
+{
+    .principles__wrap
+    {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+    .principles__heading
+    {
+        font-size: 48px;
+    }
+    .principles__large-heading
+    {
+        font-size: 60px;
+    }
+    .principles__sub-heading
+    {
+        font-size: 45px; 
+
+        margin-top: 10px;
+    }
+    .principles__card-form
+    {
+        max-width: 490px;
+        margin-bottom: -58px;
     }
 }

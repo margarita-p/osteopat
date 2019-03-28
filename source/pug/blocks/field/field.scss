@@ -40,11 +40,11 @@
   //   display: none;
   // }
 
-  &:hover,
-  &:focus,
-  &.active {
-    border: 1px solid color(gray);
-  }
+  // &:hover,
+  // &:focus,
+  // &.active {
+  //   border: 1px solid color(gray);
+  // }
 
   &--error:not(:focus) {
     border: 1px solid color(error);

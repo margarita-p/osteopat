@@ -1,0 +1,33 @@
+mixin principles(data)
+    +el({
+        tag: 'section',
+        class: 'principles',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .principles__wrap
+            .principles__text-wrap
+                +el({
+                    tag: 'h2',
+                    class: 'principles__heading',
+                })
+                    span.principles__large-heading ТОП 10
+                    |
+                    | основных
+                    br
+                    | принципов остеопатии
+                    span.principles__sub-heading от основателя метода
+                        br
+                        | Эндрю Тейлора Стилла
+
+            +card-form({
+                mix: 'principles__card-form',
+            })
+                +content-form({
+                    userName: true,
+                    email: true,
+                    phone: true,
+                    personalData: true,
+                    submit: 'Получить бесплатно',
+                })
