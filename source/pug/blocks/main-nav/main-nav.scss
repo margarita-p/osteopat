@@ -5,6 +5,7 @@
 .main-nav__item {
   margin-bottom: 6px;
   font-size: 16px;
+  line-height: 20px;
   font-weight: 500;
   color: color(black);
   line-height: 1.2;
@@ -34,24 +35,12 @@
   }
 
   .main-nav__item {
-    margin-right: 5px;
-    font-size: 14px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &.active {
-      .main-nav__link {
-        &::after {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  .main-nav__link {
     position: relative;
+    margin-right: 5px;
+    margin-bottom: 0;
+    padding: 15px 0;
+    font-size: 14px;
+    line-height: 18px;
 
     &::after {
       content: "";
@@ -59,9 +48,19 @@
       left: 10px;
       right: 10px;
       height: 4px;
-      bottom: -20px;
+      bottom: 0;
       opacity: 0;
       background-color: color(primary);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      &::after {
+        opacity: 1;
+      }
     }
   }
 }

@@ -1,0 +1,42 @@
+mixin social(data)
+    +el({
+        tag: 'ul',
+        class: 'social',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        if data.phone
+            +el({
+                tag: 'li',
+                class: 'social__item',
+            })
+                +el({
+                    tag: 'a',
+                    class: 'social__link',
+                    href: 'tel:' + data.phone,
+                    title: 'Позвонить нам',
+                })
+                    +el({
+                        class: 'social__icon',
+                        tag: 'svg',
+                        icon: 'phone-bubble',
+                    })(aria-hidden='true')
+        each item in data.items
+            +el({
+                tag: 'li',
+                class: 'social__item',
+                mod: item.mod,
+            })
+                +el({
+                    tag: 'a',
+                    class: 'social__link',
+                    href: item.href,
+                    target: '_blank',
+                    title: item.title,
+                })
+                    +el({
+                        class: 'social__icon',
+                        tag: 'svg',
+                        icon: item.icon,
+                    })(aria-hidden='true')

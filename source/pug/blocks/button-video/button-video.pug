@@ -5,8 +5,6 @@ mixin button-video(data)
         mod: data.mod,
         mix: data.mix,
         js: data.js,
-        type: data.type,
-
     })&attributes(attributes)
         +el({
             tag: 'span',
@@ -15,5 +13,9 @@ mixin button-video(data)
         })
         +el({
             tag: 'span',
-            class: 'btn-video__icon',
+            class: 'btn-video__circle-outer',
         })
+            +el({
+                tag: 'span',
+                class: 'btn-video__circle-inner',
+            })

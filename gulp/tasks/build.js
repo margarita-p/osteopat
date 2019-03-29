@@ -7,6 +7,7 @@ module.exports = gulp.series(
     'sass',
     'scripts',
     'fonts',
+    'favicon',
     'images',
     'libScripts',
     'libStyles',

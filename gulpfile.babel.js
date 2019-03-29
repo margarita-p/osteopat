@@ -10,6 +10,7 @@ runTask('copy');
 runTask('default');
 runTask('deploy');
 runTask('fonts');
+runTask('favicon');
 runTask('images');
 runTask('libScripts');
 runTask('libStyles');

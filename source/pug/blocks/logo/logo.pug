@@ -8,9 +8,16 @@ mixin logo(data)
         href: main == true ? 'none' : 'index.html',
         title: main == true ? data.title : 'Вернуться на главную страницу',
     })&attributes(attributes)
-        +el({
-            tag: 'picture',
-            class: 'logo_picture',
-        })
-            source(media='(min-width: 768px)' srcset='./assets/images/logo.svg')
-            img.logo__image(src='./assets/images/logo-sm.svg' alt='Остеопрактика')
+        if data.header
+            +el({
+                tag: 'picture',
+                class: 'logo_picture',
+            })
+                source(media='(min-width: 768px)' srcset='./assets/images/logo.svg')
+                img.logo__image(src='./assets/images/logo-sm.svg' alt='Остеопрактика')
+        else
+            +el({
+                class: 'logo__image',
+                tag: 'img',
+                src: 'logo.svg'
+            })

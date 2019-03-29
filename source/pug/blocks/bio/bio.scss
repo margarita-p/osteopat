@@ -9,7 +9,7 @@
 }
 
 .bio__heading {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -31,6 +31,14 @@
 }
 
 @include respond-to(medium) {
+  .bio {
+    background-color: #fdfdfe;
+    background-image: url('../assets/images/bio.png');
+    background-size: cover;
+    background-position: 10% center;
+    background-repeat: no-repeat;
+  }
+
   .bio__wrap {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -41,7 +49,7 @@
   }
 
   .bio__heading {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .bio__list {
@@ -56,6 +64,10 @@
 }
 
 @include respond-to(large) {
+  .bio {
+    background-position: 0 center;
+  }
+
   .bio__wrap {
     padding-top: 60px;
     padding-bottom: 50px;
@@ -74,5 +86,11 @@
   .bio__large-text {
     font-size: 24px;
   }
+}
 
+@include respond-to(1600px) {
+  .bio {
+    background-position: 100% center;
+    background-size: contain;
+  }
 }

@@ -2,6 +2,19 @@
   font-size: 14px;
   line-height: 1.7;
   font-weight: 500;
+
+  &--footer {
+    color: color(white);
+
+    .person__prof {
+      color: color(white);
+    }
+
+    .person__last-name,
+    .person__first-name {
+      display: block;
+    }
+  }
 }
 
 .person__prof {

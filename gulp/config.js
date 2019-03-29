@@ -15,6 +15,7 @@ const config = {
     spritePng     : srcPath + '/assets/sprites/png/**/*.png',
     spriteSvg     : srcPath + '/assets/sprites/svg/**/*.svg',
     fonts         : srcPath + '/assets/fonts/**/*',
+    favicon       : srcPath + '/assets/favicon/**/*',
     libScripts    : [
                       // 'node_modules/jquery/dist/jquery.js',
                       './node_modules/object-fit-images/dist/ofi.js',
@@ -38,6 +39,7 @@ const config = {
     libScripts    : destPath + '/assets/libs/scripts',
     libStyles     : destPath + '/assets/libs/styles',
     fonts         : destPath + '/assets/fonts',
+    favicon       : destPath + '/assets/favicon',
     spriteSvg     : destPath + '/assets/sprites/svg/',
   },
   watch: {
@@ -48,6 +50,7 @@ const config = {
     scripts       : srcPath + '/**/*.js',
     spriteSvg     : srcPath + '/assets/sprites/svg/**/*.svg',
     fonts         : srcPath + '/assets/fonts/**/*.*',
+    favicon       : srcPath + '/assets/favicon/**/*',
     images        : [srcPath + '/assets/images/**/*.*', srcPath + '/blocks/**/images/*.*', srcPath + '/html/blocks/**/images/*.*'],
   },
   onError: require('./util/onError')

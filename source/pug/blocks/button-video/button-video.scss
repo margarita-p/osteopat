@@ -4,25 +4,65 @@
 }
 
 .btn-video__text,
-.btn-video__icon {
+.btn-video__circle-inner {
   flex-shrink: 0;
-  display: inline-block;
 }
 
 .btn-video__text {
+  display: inline-block;
   width: 75px;
-  margin-right: 10px;
+  margin-right: 15px;
   font-size: 12px;
   line-height: 1.2;
   font-weight: 700;
   text-align: left;
 }
 
-.btn-video__icon {
+.btn-video__circle-outer {
+  position: relative;
   width: 60px;
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../assets/images/circle.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-4px, -50%);
+    width: 8px;
+    height: 8px;
+    border: 2px solid color(primary);
+    border-radius: 50%;
+  }
+}
+
+.btn-video__circle-inner {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #077bad;
   border-radius: 50%;
-  background-color: color(gray);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-1px, -50%);
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-left: 6px solid color(black);
+  }
 }
 
 @include respond-to(520px) {
@@ -37,9 +77,25 @@
     font-size: 13px;
   }
 
-  .btn-video__icon {
-    width: 75px;
-    height: 75px;
+  .btn-video__circle-outer {
+    width: 78px;
+    height: 78px;
+
+    &::before {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .btn-video__circle-inner {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      transform: translate(-2px, -50%);
+      border: 8px solid transparent;
+      border-left: 8px solid color(black);
+    }
   }
 }
 
@@ -54,8 +110,25 @@
     font-size: 16px;
   }
 
-  .btn-video__icon {
-    width: 90px;
-    height: 90px;
+  .btn-video__circle-outer {
+    width: 96px;
+    height: 96px;
+
+    &::before {
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  .btn-video__circle-inner {
+    width: 48px;
+    height: 48px;
+    border-width: 4px;
+
+    &::before {
+      transform: translate(-2px, -50%);
+      border: 9px solid transparent;
+      border-left: 9px solid color(black);
+    }
   }
 }

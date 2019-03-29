@@ -1,4 +1,6 @@
 .reception {
+  position: relative;
+  z-index: 1;
   background-color: color(primary);
   color: color(white);
 }
@@ -33,7 +35,7 @@
 .reception__heading {
   color: inherit;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 24px;
   text-transform: uppercase;
 
   span {
@@ -48,6 +50,13 @@
 }
 
 @include respond-to(medium) {
+  .reception {
+    background-image: url('../assets/images/spine.png');
+    background-size: contain;
+    background-position: 60%;
+    background-repeat: no-repeat;
+  }
+
   .reception__wrap {
     flex-direction: row;
     padding-top: 40px;
@@ -62,7 +71,7 @@
   }
 
   .reception__heading {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .reception__text {

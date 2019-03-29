@@ -1,8 +1,28 @@
-$btn-down-size: 44px;
-
-.button-down {
+.btn-down {
+  position: relative;
   display: block;
-  width: $btn-down-size;
-  height: $btn-down-size;
-  height: $btn-burger-height;
+  width: 44px;
+  height: 44px;
+  background-image: url('../assets/images/circle.png'), url('../assets/images/circle.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain, 42px;
+}
+
+.btn-down__arrow {
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%) rotate(90deg);
+  fill: color(primary);
+
+  &--top {
+    top: 11px;
+  }
+
+  &--bottom {
+    top: 19px;
+  }
 }

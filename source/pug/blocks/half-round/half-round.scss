@@ -36,10 +36,9 @@ $half-round-size-lg-lg: 680px;
 .half-round__picture,
 .half-round__picture img {
   max-width: none;
-  width: auto !important;
+  width: auto;
   height: 100%;
 }
-
 
 @include respond-to(520px) {
   .half-round {
@@ -118,12 +117,5 @@ $half-round-size-lg-lg: 680px;
     &--right-lg {
       border-radius: 0 ($half-round-size-lg-lg / 2) ($half-round-size-lg-lg / 2) 0;
     }
-  }
-
-  .half-round__picture,
-  .half-round__picture img {
-    width: auto !important;
-    height: 100%;
-    max-width: none;
   }
 }

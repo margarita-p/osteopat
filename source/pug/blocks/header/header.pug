@@ -3,7 +3,7 @@ mixin header(data)
     -
         var phones = [
             {
-                descr: 'Севастополь',
+                descr: 'Симферополь',
                 href: '79785032856',
                 phone: '<span>+7 (978)</span> 503-28-56',
             },
@@ -47,6 +47,8 @@ mixin header(data)
             .header__top
                 +logo({
                     mix: 'header__logo',
+                    header: true,
+                    mod: 'header',
                 })
                 +person({
                     mix: 'header__person',

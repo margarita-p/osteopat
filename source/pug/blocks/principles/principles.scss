@@ -1,4 +1,6 @@
 .principles {
+  position: relative;
+  z-index: 1;
   background-color: color(primary);
   color: color(white);
 }
@@ -29,6 +31,10 @@
   font-size: 25px;
 }
 
+.principles__image {
+  display: none;
+}
+
 @include respond-to(medium) {
   .principles__wrap {
     padding-top: 40px;
@@ -56,7 +62,21 @@
     max-width: 490px;
     margin-bottom: -48px;
   }
+}
 
+@include respond-to(920px) {
+  .principles__wrap {
+    position: relative;
+  }
+
+  .principles__image {
+    position: absolute;
+    left: 510px;
+    bottom: -60px;
+    z-index: 1;
+    display: block;
+    width: 740px;
+  }
 }
 
 @include respond-to(large) {
@@ -82,4 +102,42 @@
     max-width: 490px;
     margin-bottom: -58px;
   }
+
+  .principles__image {
+    left: 545px;
+    bottom: -65px;
+    width: 830px;
+  }
+
+  .principles__strip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:0;
+    bottom: 0;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2000px;
+      height: 600px;
+      border-radius: 300px;
+      background-color: rgba(#fff, 0.07);
+    }
+
+    &::before {
+      bottom: 50px;
+      left: 50%;
+      transform: translate(320px) rotate(30deg);
+    }
+
+    &::after {
+      top: 50px;
+      right: 50%;
+      transform: translate(-320px) rotate(30deg);
+    }
+  }
+
 }

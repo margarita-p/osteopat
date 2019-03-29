@@ -4,5 +4,17 @@ mixin button-down(data)
         class: 'btn-down',
         mod: data.mod,
         mix: data.mix,
-        ariaLabel: 'Прокрутить вниз'
+        ariaLabel: 'Вниз'
     })&attributes(attributes)
+        +el({
+            tag: 'svg',
+            class: 'btn-down__arrow',
+            icon: 'arrow',
+            mod: 'top',
+        })
+        +el({
+            tag: 'svg',
+            class: 'btn-down__arrow',
+            icon: 'arrow',
+            mod: 'bottom',
+        })

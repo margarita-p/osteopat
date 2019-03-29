@@ -49,10 +49,12 @@ button {
   font: inherit;
   color: inherit;
   text-transform: inherit;
+  transition: duration(md);
 }
 
 a {
   text-decoration: underline;
+  cursor: pointer;
 
   @include hover {
     text-decoration: none;
@@ -60,5 +62,5 @@ a {
 }
 
 textarea {
-  resize: vertical;
+  resize: none;
 }

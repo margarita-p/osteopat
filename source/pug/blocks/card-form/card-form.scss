@@ -28,7 +28,7 @@
 
 @include respond-to(large) {
   .card-form {
-    padding: 60px;
+    padding: 55px 60px;
   }
 
   .card-form__heading {

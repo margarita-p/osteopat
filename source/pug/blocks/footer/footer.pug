@@ -1,0 +1,124 @@
+mixin footer(data)
+    -
+        var person = {
+            prof: 'Доктор-остеопат',
+            lastName: 'Иванчегло',
+            firstName: 'Валентин Александрович'
+        };
+
+    -
+        var navColumn1 = [
+            'Главная',
+            'О докторе',
+            'Остеопрактика',
+            'Биологическое центрирование',
+        ];
+
+    -
+        var navColumn2 = [
+            'Остеопатия',
+            'Вопрос-ответ',
+            'Отзывы',
+            'Полезная информация',
+            'Контакты',
+        ];
+
+    +el({
+        tag: 'footer',
+        class: 'footer',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .footer__wrap
+            .footer__top
+                .footer__company
+                    +logo({
+                        mix: 'footer__logo',
+                        mod: 'footer',
+                    })
+                    +person({
+                        mix: 'footer__person',
+                        mod: 'footer',
+                        person: person
+                    })
+                    +social({
+                        mix: 'footer__social',
+                        phone: '79785032856',
+                        items: [
+                            {
+                                href: '#',
+                                title: 'Мы в Инстаграме',
+                                icon: 'instagram'
+                            },
+                        ]
+                    })
+                .footer__middle
+                    .footer__contacts
+                        p
+                            | г. СИМФЕРОПОЛЬ,
+                            br
+                            | пр. Генерала Острякова, 15, оф., 4-1
+                            br
+                            +el({
+                                tag: 'a',
+                                href: 'tel:79785032856',
+                                text: 'тел. +7 (978) 503-28-56'
+                            })
+                        p
+                            | г. САНКТ-ПЕТЕРБУРГ, м. Василеостровская,
+                            br
+                            | 6-я линия Васильевского острова, 43,
+                            br
+                            | «Лотус Остеопрактика»
+                            br
+                            +el({
+                                tag: 'a',
+                                href: 'tel:78121234567',
+                                text: 'тел. +7 (812) 123-45-67'
+                            })
+                    .footer__nav
+                        +el({
+                            tag: 'ul',
+                            class: 'footer__nav-list',
+                        })
+                            each item in navColumn1
+                                +el({
+                                    tag: 'li',
+                                    class: 'footer__nav-item',
+                                })
+                                    +el({
+                                        tag: 'a',
+                                        text: item,
+                                            })
+                        +el({
+                            tag: 'ul',
+                            class: 'footer__nav-list',
+                        })
+                            each item in navColumn2
+                                +el({
+                                    tag: 'li',
+                                    class: 'footer__nav-item',
+                                })
+                                    +el({
+                                        tag: 'a',
+                                        text: item,
+                                    })
+        .footer__bottom
+            .footer__wrap
+                .footer__copyright
+                    | г.&nbsp;Симферополь ©&nbsp;Copyright&nbsp;2019&nbsp;г.
+                .footer__info
+                    | Все приведённые выше материалы, касающиеся заболеваний, их&nbsp;диагностики и&nbsp;лечения, остеопатии&nbsp;&mdash;
+                    | носят ознакомительный характер. Перед консультацией&nbsp;&mdash; посоветуйтесь с&nbsp;врачом.
+                .footer__made
+                    | Сделано в
+                    +el({
+                        tag: 'a',
+                        title: 'Sheer',
+                        href: 'https://sheer82.ru/'
+                    })
+                        +el({
+                            tag: 'svg',
+                            icon: 'sheer',
+                        })
