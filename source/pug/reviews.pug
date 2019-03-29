@@ -1,0 +1,21 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Отзывы - Остеопрактика'
+    - var main = false
+    - var pageId = 8
+
+block content
+    main.content.content--regular
+        .content__wrap
+            h1.content__heading
+                | Отзывы
+            .content__card-list
+                //-each item in cardsInfo
+                    //-+card-info({
+                        mix: 'content__card-item',
+                        image: item.image,
+                        heading: item.heading,
+                        text: item.text,
+                        time: item.time
+                        })

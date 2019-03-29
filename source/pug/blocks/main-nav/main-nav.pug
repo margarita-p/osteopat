@@ -21,7 +21,7 @@ mixin main-nav(data)
                 -var active = ' active'
             else
                 -var active = ''
-            +mainNavItem(className, item, item, active)
+            +mainNavItem(className, item, '', active)
                 if item.lvl
                     - var lvl = item.lvl.lvl
                     +el({

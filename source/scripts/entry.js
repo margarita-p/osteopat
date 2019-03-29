@@ -6,4 +6,3 @@ require('./global/onEsc');
 require('../pug/blocks/header/header');
 require('../pug/blocks/field/field');
 require('../pug/blocks/modal/modal');
-// require('../pug/blocks/intro/intro');

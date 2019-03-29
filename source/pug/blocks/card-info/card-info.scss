@@ -1,0 +1,44 @@
+.card-info__image-link {
+  display: block;
+  border-radius: 5px;
+  background-color: color(light);
+}
+
+.card-info__image {
+
+}
+
+.card-info__heading {
+
+}
+
+.card-info__content {
+  // display: flex;
+  // flex-direction: column;
+  padding: 20px 0;
+}
+
+.card-info__text {
+  text-overflow: ellipsis;
+}
+
+.card-info__footer {
+  // margin-top: auto;
+}
+
+.card-info__time {
+  text-transform: uppercase;
+}
+
+@include respond-to(medium) {
+
+}
+
+@include respond-to(large) {
+  .card-info__image-link {
+    height: 240px;
+  }
+
+
+
+}
