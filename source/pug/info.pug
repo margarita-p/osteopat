@@ -67,12 +67,12 @@ block content
         .content__wrap
             h1.content__heading
                 | Полезная информация
-            .content__card-list
+            ul.content__card-list
                 each item in cardsInfo
-                    +card-info({
-                        mix: 'content__card-item',
-                        image: item.image,
-                        heading: item.heading,
-                        text: item.text,
-                        time: item.time
-                    })
+                    li.content__card-item
+                        +card-info({
+                            image: item.image,
+                            heading: item.heading,
+                            text: item.text,
+                            time: item.time
+                        })
