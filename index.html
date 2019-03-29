@@ -142,7 +142,7 @@
                 </span>
               </button>
             </div>
-            <button class="btn btn--bg-primary intro__btn" type="button">Записаться на приём
+            <button class="btn btn--bg-primary intro__btn js-appointment" type="button">Записаться на приём
             </button>
           </div>
           <ul class="list list--style-border intro__list">
@@ -206,7 +206,7 @@
               <li class="list__item">Снижение имунитета и др.
               </li>
             </ul>
-            <button class="btn btn--bg-primary problems__btn" type="button">Записаться на приём
+            <button class="btn btn--bg-primary problems__btn js-appointment" type="button">Записаться на приём
             </button>
           </div>
         </div>
@@ -376,6 +376,55 @@
         <div class="principles__strip"></div>
       </section>
     </main>
+    <div class="modal modal--appointment">
+      <div class="overlay overlay--modal active">
+      </div>
+      <div class="modal__wrap">
+        <div class="modal__content">
+          <button class="button-remove modal__close" type="button">
+            <span class="button-remove__icon">
+            </span>
+          </button>
+          <h3 class="modal__heading">Записаться на <br>приём к&nbsp;остеопракту
+          </h3>
+          <form class="content-form" action="/" method="post" accept-charset="UTF-8">
+            <div class="content-form__field-group">
+              <label class="field field--icon content-form__field">
+                <span class="hidden">Имя пользователя
+                </span>
+                <span class="field__icon">
+                  <svg width="20" height="20">
+                    <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
+                  </svg>
+                </span>
+                <input class="field__input" tabindex="0" placeholder="Имя" name="userName" required type="text">
+              </label>
+              <label class="field field--icon content-form__field">
+                <span class="hidden">Телефон
+                </span>
+                <span class="field__icon">
+                  <svg width="20" height="20">
+                    <use xlink:href="./assets/sprites/svg/sprite.svg#phone"></use>
+                  </svg>
+                </span>
+                <input class="field__input" tabindex="0" placeholder="Телефон" name="phone" required type="tel">
+              </label>
+            </div>
+            <div class="content-form__personal">
+              <label class="checkbox checkbox--small">
+                <input class="hidden checkbox__input" required type="checkbox">
+                <span class="checkbox__label">Согласие на обработку персональных данных
+                </span>
+              </label>
+            </div>
+            <div class="content-form__submit">
+              <button class="btn btn--bg-primary" type="submit">Записаться
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="footer__wrap">
         <div class="footer__top">
