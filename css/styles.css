@@ -226,6 +226,11 @@ h6
     color: #353535;
 }
 
+h1
+{
+    text-transform: uppercase;
+}
+
 p,
 ul,
 ol,
@@ -305,7 +310,7 @@ blockquote::before
     }
     h1
     {
-        font-size: 30px; 
+        font-size: 32px; 
 
         margin-bottom: 24px;
     }
@@ -357,7 +362,7 @@ blockquote::before
     }
     h1
     {
-        font-size: 36px; 
+        font-size: 40px; 
 
         margin-bottom: 30px;
     }
@@ -435,14 +440,21 @@ body > *
     margin-top: auto;
 }
 
-.content__wrapper
+.content--regular
+{
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.content__wrap
 {
     padding-right: 20px; 
     padding-left: 20px;
 }
 @media (min-width: 768px)
 {
-    .content__wrapper
+    .content__wrap
     {
         padding-right: 30px; 
         padding-left: 30px;
@@ -450,7 +462,7 @@ body > *
 }
 @media (min-width: 1220px)
 {
-    .content__wrapper
+    .content__wrap
     {
         width: 1220px;
         margin-right: auto;
@@ -474,6 +486,10 @@ body > *
 
 @media (min-width: 768px)
 {
+    .content--regular
+    {
+        margin-top: 95px;
+    }
     .content__section--intro,
     .content__section--problems
     {
@@ -483,6 +499,11 @@ body > *
 
 @media (min-width: 1220px)
 {
+    .content--regular
+    {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
     .content__section--intro,
     .content__section--problems
     {
@@ -3801,4 +3822,37 @@ body > *
     height: 100%;
 
     fill: #fff;
+}
+
+.card-info__image-link
+{
+    display: block;
+
+    border-radius: 5px;
+    background-color: #eff5f3;
+}
+
+.card-info__content
+{
+    padding: 20px 0;
+}
+
+.card-info__text
+{
+       text-overflow: ellipsis; 
+
+    -o-text-overflow: ellipsis;
+}
+
+.card-info__time
+{
+    text-transform: uppercase;
+}
+
+@media (min-width: 1220px)
+{
+    .card-info__image-link
+    {
+        height: 240px;
+    }
 }
