@@ -24,9 +24,13 @@ block content
             mix: 'content__section content__section--principles',
         })
 
-
-
-    //-  +modal({
-        mod: 'price-order'
+    +modal({
+        mod: 'appointment',
+        heading: 'Записаться на <br>приём к&nbsp;остеопракту'
+    })
+        +content-form({
+            userName: true,
+            phone: true,
+            personalData: true,
+            submit: 'Записаться',
         })
-            +price-order({})

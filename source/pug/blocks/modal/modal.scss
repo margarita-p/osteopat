@@ -13,6 +13,16 @@
   &.active {
     display: flex;
   }
+
+}
+
+.modal__wrap {
+  width: 100%;
+  background-color: color(primary);
+  background-image: url('../assets/images/spine.png');
+  background-repeat: no-repeat;
+  background-position: calc(50% - 260px);
+  background-size: contain;
 }
 
 .modal__content {
@@ -21,7 +31,9 @@
   height: 100vh;
   padding: 20px;
   padding-top: 60px;
+  border: 20px solid rgba(255,255,255, 0.5);
   background-color: color(white);
+  background-clip: padding-box;
   overflow-y: scroll;
 }
 
@@ -31,14 +43,19 @@
   right: 0;
 }
 
+.modal__heading {
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 400;
+}
+
 @include respond-to(medium) {
   .modal {
-    padding: 50px;
+    padding: 50px 0;
 
-    &--price-order,
-    &--phone-order, {
+    &--appointment {
       .modal__content {
-        width: 380px;
+        width: 550px;
       }
     }
   }
@@ -46,10 +63,16 @@
   .modal__content {
     width: auto;
     height: auto;
-    padding: 30px 40px;
+    margin: 0 auto;
+    padding: 0 40px;
     padding-top: 60px;
-    background-color: rgba(#fff, 0.9);
+    padding-bottom: 70px;
     overflow-y: auto;
+  }
+
+  .modal__heading {
+    margin-bottom: 36px;
+    font-size: 24px;
   }
 }
 
@@ -58,5 +81,14 @@
     &--price-order {
       display: none;
     }
+  }
+
+  .modal__content {
+    border: 27px solid rgba(255,255,255, 0.5);
+  }
+
+  .modal__heading {
+    margin-bottom: 40px;
+    font-size: 30px;
   }
 }

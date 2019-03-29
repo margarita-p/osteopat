@@ -5,15 +5,12 @@
   padding: 12px;
 
   @include hover {
-    .button-remove__icon {
-      @include icon-cross-color(darken(color(gray), 10%));
-    }
+    background-color: rgba(#000, 0.07);
   }
 }
 
 .button-remove__icon {
   position: relative;
   display: block;
-
-  @include icon-cross(3px, color(light-gray), 45deg);
+  @include icon-cross(2px, #176888, 45deg);
 }

@@ -9,10 +9,15 @@ mixin modal(data)
             mix: 'active',
             mod: 'modal'
         })
-        +el({
-            mix: 'modal__content',
-        })
-            +button-remove({
-                mix: 'modal__close'
-            })
-            block
+        .modal__wrap
+            .modal__content
+                +button-remove({
+                    mix: 'modal__close'
+                })
+                if data.heading
+                    +el({
+                        tag: 'h3',
+                        class: 'modal__heading',
+                        text: data.heading,
+                    })
+                block

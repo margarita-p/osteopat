@@ -817,12 +817,10 @@ body > *
     height: 50px;
     padding: 12px;
 }
-.button-remove:hover .button-remove__icon::before,
-.button-remove:hover .button-remove__icon::after,
-.button-remove:focus .button-remove__icon::before,
-.button-remove:focus .button-remove__icon::after
+.button-remove:hover,
+.button-remove:focus
 {
-    background-color: #788891;
+    background-color: rgba(0, 0, 0, .07);
 }
 
 .button-remove__icon
@@ -835,18 +833,18 @@ body > *
 .button-remove__icon::after
 {
     position: absolute;
-    top: calc(50% - 1.5px);
+    top: calc(50% - 1px);
     left: 0;
 
     display: block;
 
     width: 100%;
-    height: 3px;
+    height: 2px;
 
     content: '';
 
-    border-radius: 1.5px;
-    background-color: #c9c9c6;
+    border-radius: 1px;
+    background-color: #176888;
 }
 .button-remove__icon::before
 {
@@ -2561,6 +2559,17 @@ body > *
     display: flex;
 }
 
+.modal__wrap
+{
+    width: 100%;
+
+    background-color: #3599c4;
+    background-image: url('../assets/images/spine.png');
+    background-repeat: no-repeat;
+    background-position: calc(50% - 260px);
+    background-size: contain;
+}
+
 .modal__content
 {
     position: relative;
@@ -2572,7 +2581,9 @@ body > *
     padding: 20px;
     padding-top: 60px;
 
+    border: 20px solid rgba(255, 255, 255, .5);
     background-color: #fff;
+    background-clip: padding-box;
 }
 
 .modal__close
@@ -2582,16 +2593,24 @@ body > *
     right: 0;
 }
 
+.modal__heading
+{
+    font-weight: 400; 
+
+    margin-bottom: 32px;
+
+    text-align: center;
+}
+
 @media (min-width: 768px)
 {
     .modal
     {
-        padding: 50px;
+        padding: 50px 0;
     }
-    .modal--price-order .modal__content,
-    .modal--phone-order .modal__content
+    .modal--appointment .modal__content
     {
-        width: 380px;
+        width: 550px;
     }
     .modal__content
     {
@@ -2599,10 +2618,16 @@ body > *
 
         width: auto;
         height: auto;
-        padding: 30px 40px;
+        margin: 0 auto;
+        padding: 0 40px;
         padding-top: 60px;
+        padding-bottom: 70px;
+    }
+    .modal__heading
+    {
+        font-size: 24px; 
 
-        background-color: rgba(255, 255, 255, .9);
+        margin-bottom: 36px;
     }
 }
 
@@ -2611,6 +2636,16 @@ body > *
     .modal--price-order
     {
         display: none;
+    }
+    .modal__content
+    {
+        border: 27px solid rgba(255, 255, 255, .5);
+    }
+    .modal__heading
+    {
+        font-size: 30px; 
+
+        margin-bottom: 40px;
     }
 }
 
@@ -3068,7 +3103,7 @@ body > *
     }
     .content-form__personal
     {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 }
 
