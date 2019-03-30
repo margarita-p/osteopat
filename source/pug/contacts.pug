@@ -6,5 +6,12 @@ block vars
     - var pageId = 9
 
 block content
-    main.content.content--regular
+    main.content.content--contacts
         .content__wrap
+            +contacts({
+                mix: 'content__contacts',
+            })
+        +map({
+            mix: 'content__map',
+            href: 'https://yandex.ru/maps/-/CBFeVOV0cA'
+        })

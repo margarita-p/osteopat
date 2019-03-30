@@ -1,0 +1,94 @@
+.contacts__image {
+  overflow: hidden;
+  width: 263px;
+  height: 328px;
+  margin-bottom: 30px;
+  border-radius: rad(md);
+
+  img {
+    width: 263px;
+    height: 328px;
+  }
+}
+
+.contacts__name {
+  font-weight: 500;
+
+  span {
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+.contacts__text-wrap {
+  margin-bottom: 20px;
+}
+
+.contacts__text {
+
+}
+
+.contacts__phone {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contacts__social {
+
+}
+
+.contacts__card-form {
+  width: auto;
+}
+
+@include respond-to(620px) {
+  .contacts__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+  }
+
+  .contacts__image {
+    flex-shrink: 0;
+    margin-right: 40px;
+  }
+
+  .contacts__text-wrap {
+    margin-bottom: 20px;
+    padding-top: 40px;
+  }
+
+  .contacts__card-form {
+  }
+}
+
+@include respond-to(1024px) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__content {
+    margin-right: auto;
+  }
+
+  .contacts__text-wrap {
+  }
+
+  .contacts__card-form {
+    width: 380px;
+  }
+}
+
+
+@include respond-to(large) {
+  .contacts__image {
+    margin-right: 50px;
+  }
+
+  .contacts__card-form {
+    width: 460px;
+  }
+}

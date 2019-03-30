@@ -63,6 +63,11 @@ $durations: (
   lg: 0.6s,
 );
 
+// для бордер-радиусов
+$rad: (
+  md: 5px,
+);
+
 $func: (
   primary: cubic-bezier(0.25, 0.1, 0.25, 1),
 );

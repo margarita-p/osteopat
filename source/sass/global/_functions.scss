@@ -62,3 +62,11 @@
   @warn "Unknown `#{$key}` in $func.";
   @return null;
 }
+
+@function rad($key) {
+  @if map-has-key($rad, $key) {
+    @return map-get($rad, $key);
+  }
+  @warn "Unknown `#{$key}` in $rad.";
+  @return null;
+}

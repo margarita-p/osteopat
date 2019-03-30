@@ -7,7 +7,7 @@
 @import "./mixins/mixins";
 @import "./global/base";
 @import "./global/typography";
-@import "./blocks/hidden";
+@import "./blocks/helpers";
 @import "./blocks/sticky-footer";
 @import "./blocks/content";
 
@@ -42,3 +42,10 @@
 @import "../pug/blocks/social/social";
 
 @import "../pug/blocks/card-info/card-info";
+@import "../pug/blocks/card-reviews/card-reviews";
+@import "../pug/blocks/viewbar/viewbar";
+@import "../pug/blocks/lead/lead";
+
+@import "../pug/blocks/dropdown/dropdown";
+@import "../pug/blocks/contacts/contacts";
+@import "../pug/blocks/map/map";

@@ -1,0 +1,56 @@
+mixin contacts(data)
+    +el({
+        class: 'contacts',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .contacts__content
+            +picture({
+                mix: 'contacts__image',
+                image: 'person-small',
+                imageExp: 'jpg',
+                alt: 'Фото Иванчегло Валентина Александровича',
+            })
+            .contacts__text-wrap
+                +lead({
+                    mix: 'contacts__name',
+                    mod: 'line-bottom',
+                    text: '<span>Иванчегло </span>Валентин Александрович',
+                })
+                +el({
+                    tag: 'p',
+                    class: 'contacts__text',
+                    text: 'г. Севастополь, <br>пр. Генерала Острякова, 15, оф., 41'
+                })
+                +el({
+                    tag: 'a',
+                    class: 'contacts__phone',
+                    href: 'tel:79785032856',
+                    text: '+7 (978) 503-28-56',
+                })
+                +social({
+                    mix: 'contacts__social',
+                    mod: 'primary',
+                    phone: '79785032856',
+                    items: [
+                        {
+                            href: '#',
+                            title: 'Мы в Инстаграме',
+                            icon: 'instagram'
+                        },
+                    ]
+                })
+        +card-form({
+            mix: 'contacts__card-form',
+            heading: 'Обратная связь'
+        })
+            +content-form({
+                userName: true,
+                phone: true,
+                message: {
+                    placeholder: 'Сообщение',
+                },
+                personalData: true,
+                submit: 'Отправить',
+            })

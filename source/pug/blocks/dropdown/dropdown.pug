@@ -1,0 +1,25 @@
+mixin dropdown(data)
+    +el({
+        class: 'dropdown',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'button',
+            class: 'dropdown__button',
+            js: data.js,
+        })
+            +el({
+                tag: 'h4',
+                class: 'dropdown__heading',
+                text: data.heading,
+            })
+            +el({
+                tag: 'span',
+                class: 'dropdown__icon',
+            })
+        +el({
+            class: 'dropdown__content',
+            text: data.text,
+        })

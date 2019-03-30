@@ -8,11 +8,18 @@ mixin intro(data)
     })&attributes(attributes)
         .intro__wrap
             .intro__top
-                +slogan({
-                    mix: 'intro__slogan',
-                    heading: 'Позвольте <span class="slogan__primary">Здоровью наполнить</span> Вашу&nbsp;жизнь',
-                    subheading: '<b>Остеопрактика</b>&nbsp;&mdash; это новый этап оздоровительных технологий'
-                })
+                .intro__slogan
+                    h1.intro__heading
+                        | Позвольте
+                        |
+                        span.text-primary Здоровью наполнить
+                        |
+                        | Вашу&nbsp;жизнь
+                    +lead({
+                        mix: 'intro__lead',
+                        mod: ['lg', 'line-left'],
+                        text: '<b>Остеопрактика</b>&nbsp;&mdash; это новый этап оздоровительных технологий'
+                    })
                 .intro__video
                     +half-round({
                         mix: 'intro__video-half-round',

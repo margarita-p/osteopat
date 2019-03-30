@@ -1,0 +1,109 @@
+.lead {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: color(primary);
+  }
+
+  &--lg {
+    font-size: 20px;
+  }
+
+  &--line-left {
+    padding-left: 75px;
+
+    &::before {
+      top: 13px;
+      left: 0;
+      width: 60px;
+    }
+  }
+
+  &--line-bottom {
+    padding-bottom: 15px;
+
+    &::before {
+      bottom: 0;
+      left: 0;
+      width: 100px;
+    }
+  }
+}
+
+.lead--lg.lead--line-left {
+  &::before {
+    top: 16px;
+  }
+}
+
+@include respond-to(medium) {
+  .lead {
+    font-size: 19px;
+
+    &--lg {
+      font-size: 22px;
+    }
+
+    &--line-left {
+      padding-left: 115px;
+
+      &::before {
+        top: 15px;
+        width: 100px;
+      }
+    }
+
+    &--line-bottom {
+      padding-bottom: 20px;
+
+      &::before {
+        width: 115px;
+      }
+    }
+  }
+
+  .lead--lg.lead--line-left {
+    &::before {
+      top: 17px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .lead {
+    font-size: 20px;
+
+    &--lg {
+      font-size: 24px;
+    }
+
+    &--line-left {
+      padding-left: 130px;
+
+      &::before {
+        top: 16px;
+        width: 115px;
+      }
+    }
+
+    &--line-bottom {
+
+      &::before {
+
+      }
+    }
+  }
+
+  .lead--lg.lead--line-left {
+    &::before {
+      top: 19px;
+    }
+  }
+}

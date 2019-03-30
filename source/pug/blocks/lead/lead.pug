@@ -1,0 +1,9 @@
+mixin lead(data)
+    +el({
+        tag: 'p',
+        class: 'lead',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)
