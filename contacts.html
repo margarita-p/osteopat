@@ -42,7 +42,7 @@
           </div>
           <ul class="phone-header header__phone header__phone--desk">
             <li class="phone-header__item">
-              <span class="phone-header__descr">Симферополь
+              <span class="phone-header__descr">Севастополь
               </span>
               <a class="phone-header__number" href="tel:79785032856"><span>+7 (978)</span> 503-28-56
               </a>
@@ -102,7 +102,7 @@
           </ul>
           <ul class="phone-header header__phone header__phone--mob">
             <li class="phone-header__item">
-              <span class="phone-header__descr">Симферополь
+              <span class="phone-header__descr">Севастополь
               </span>
               <a class="phone-header__number" href="tel:79785032856"><span>+7 (978)</span> 503-28-56
               </a>
@@ -119,8 +119,92 @@
         </div>
       </div>
     </header>
-    <main class="content content--regular">
-      <div class="content__wrap"></div>
+    <main class="content content--contacts">
+      <div class="content__wrap">
+        <div class="contacts content__contacts">
+          <div class="contacts__content">
+            <picture class="picture contacts__image">
+              <source srcset="./assets/images/person-small.webp" type="image/webp"><img src="./assets/images/person-small.jpg" alt="Фото Иванчегло Валентина Александровича">
+            </picture>
+            <div class="contacts__text-wrap">
+              <p class="lead lead--line-bottom contacts__name"><span>Иванчегло </span>Валентин Александрович
+              </p>
+              <p class="contacts__text">г. Севастополь, <br>пр. Генерала Острякова, 15, оф., 41
+              </p>
+              <a class="contacts__phone" href="tel:79785032856">+7 (978) 503-28-56
+              </a>
+              <ul class="social social--primary contacts__social">
+                <li class="social__item">
+                  <a class="social__link" title="Позвонить нам" href="tel:79785032856">
+                    <svg class="social__icon" width="20" height="20" aria-hidden="true">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#phone-bubble"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="noopener">
+                    <svg class="social__icon" width="20" height="20" aria-hidden="true">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-form contacts__card-form">
+            <h3 class="card-form__heading">Обратная связь
+            </h3>
+            <form class="content-form" action="/" method="post" accept-charset="UTF-8">
+              <div class="content-form__field-group">
+                <label class="field field--icon content-form__field">
+                  <span class="hidden">Имя пользователя
+                  </span>
+                  <span class="field__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
+                    </svg>
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Имя" name="userName" required type="text">
+                </label>
+                <label class="field field--icon content-form__field">
+                  <span class="hidden">Телефон
+                  </span>
+                  <span class="field__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#phone"></use>
+                    </svg>
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Телефон" name="phone" required type="tel">
+                </label>
+                <label class="field field--icon content-form__field">
+                  <span class="hidden">Вопрос
+                  </span>
+                  <span class="field__icon">
+                    <svg width="20" height="20">
+                      <use xlink:href="./assets/sprites/svg/sprite.svg#message"></use>
+                    </svg>
+                  </span>
+                  <textarea class="field__input" tabindex="0" placeholder="Сообщение" name="message" required>
+                  </textarea>
+                </label>
+              </div>
+              <div class="content-form__personal">
+                <label class="checkbox checkbox--small">
+                  <input class="hidden checkbox__input" required type="checkbox">
+                  <span class="checkbox__label">Согласие на обработку персональных данных
+                  </span>
+                </label>
+              </div>
+              <div class="content-form__submit">
+                <button class="btn btn--bg-primary" type="submit">Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="map content__map" id="map">
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__wrap">
@@ -137,7 +221,7 @@
               <div class="person__first-name">Валентин Александрович
               </div>
             </div>
-            <ul class="social footer__social">
+            <ul class="social social--invert footer__social">
               <li class="social__item">
                 <a class="social__link" title="Позвонить нам" href="tel:79785032856">
                   <svg class="social__icon" width="20" height="20" aria-hidden="true">
@@ -146,7 +230,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#">
+                <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="noopener">
                   <svg class="social__icon" width="20" height="20" aria-hidden="true">
                     <use xlink:href="./assets/sprites/svg/sprite.svg#instagram"></use>
                   </svg>
@@ -156,7 +240,7 @@
           </div>
           <div class="footer__middle">
             <div class="footer__contacts">
-              <p>г. СИМФЕРОПОЛЬ,<br>пр. Генерала Острякова, 15, оф., 4-1<br>
+              <p>г. СЕВАСТОПОЛЬ,<br>пр. Генерала Острякова, 15, оф., 4-1<br>
                 <a href="tel:79785032856">тел. +7 (978) 503-28-56
                 </a>
               </p>
