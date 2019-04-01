@@ -27,7 +27,7 @@
     <header class="header">
       <div class="header__wrap">
         <div class="header__top">
-          <a class="logo logo--header header__logo" title="Вернуться на главную страницу" href="index.html">
+          <a class="logo logo--header header__logo" title="Вернуться на главную страницу" href="main.html">
             <picture class="logo_picture">
               <source media="(min-width: 768px)" srcset="./assets/images/logo.svg"><img class="logo__image" src="./assets/images/logo-sm.svg" alt="Остеопрактика">
             </picture>
@@ -44,59 +44,59 @@
             <li class="phone-header__item">
               <span class="phone-header__descr">Севастополь
               </span>
-              <a class="phone-header__number" href="tel:79785032856"><span>+7 (978)</span> 503-28-56
+              <a class="phone-header__number" href="tel:79785032856">+7 (978) <span>503-28-56</span>
               </a>
             </li>
             <li class="phone-header__item">
               <span class="phone-header__descr">Санкт-Петербург
               </span>
-              <a class="phone-header__number" href="tel:78121234567"><span>+7 (812)</span> 123-45-67
+              <a class="phone-header__number" href="tel:78121234567">+7 (812) <span>123-45-67</span>
               </a>
             </li>
           </ul>
-          <button class="button-nav header__button-nav" aria-label="Открыть меню" type="button">
-            <span class="button-nav__icon">
-              <span class="button-nav__icon-items">
+          <button class="btn-nav header__button-nav" aria-label="Открыть меню" type="button">
+            <span class="btn-nav__icon">
+              <span class="btn-nav__icon-items">
               </span>
             </span>
           </button>
         </div>
-        <nav class="header__main-nav">
+        <nav class="header__main-nav" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
           <ul class="main-nav">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="main.html" itemprop="url">Главная
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">О докторе
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#" itemprop="url">О докторе
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Остеопрактика
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#" itemprop="url">Остеопрактика
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Биологическое центрирование
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#" itemprop="url">Биологическое центрирование
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Остеопатия
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="category.html" itemprop="url">Остеопатия
               </a>
             </li>
-            <li class="main-nav__item active">
-              <a class="main-nav__link" href="faq.html">Вопрос-ответ
+            <li class="main-nav__item active" itemprop="name">
+              <a class="main-nav__link" href="faq.html" itemprop="url">Вопрос-ответ
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="reviews.html">Отзывы
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="reviews.html" itemprop="url">Отзывы
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="info.html">Полезная информация
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="info.html" itemprop="url">Полезная информация
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="contacts.html">Контакты
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="contacts.html" itemprop="url">Контакты
               </a>
             </li>
           </ul>
@@ -104,13 +104,13 @@
             <li class="phone-header__item">
               <span class="phone-header__descr">Севастополь
               </span>
-              <a class="phone-header__number" href="tel:79785032856"><span>+7 (978)</span> 503-28-56
+              <a class="phone-header__number" href="tel:79785032856">+7 (978) <span>503-28-56</span>
               </a>
             </li>
             <li class="phone-header__item">
               <span class="phone-header__descr">Санкт-Петербург
               </span>
-              <a class="phone-header__number" href="tel:78121234567"><span>+7 (812)</span> 123-45-67
+              <a class="phone-header__number" href="tel:78121234567">+7 (812) <span>123-45-67</span>
               </a>
             </li>
           </ul>
@@ -126,50 +126,40 @@
         </p>
         <div class="content__dropdown-wrap">
           <div class="dropdown content__dropdown">
-            <button class="dropdown__button" type="button">
-              <h4 class="dropdown__heading">Признана ли остеопатия официальной медициной?
-              </h4>
-              <span class="dropdown__icon">
+            <button class="btn btn--cross dropdown__btn" type="button">Признана ли остеопатия официальной медициной?
+              <span class="cross btn__cross">
               </span>
             </button>
             <div class="dropdown__content">Равным образом, убежденность некоторых оппонентов создает предпосылки для дальнейших направлений развития. В своем стремлении улучшить пользовательский опыт мы упускаем, что ключевые особенности структуры проекта, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут указаны как претенденты на роль ключевых факторов.
             </div>
           </div>
           <div class="dropdown content__dropdown">
-            <button class="dropdown__button" type="button">
-              <h4 class="dropdown__heading">Насколько безопасна остеопатия?
-              </h4>
-              <span class="dropdown__icon">
+            <button class="btn btn--cross dropdown__btn" type="button">Насколько безопасна остеопатия?
+              <span class="cross btn__cross">
               </span>
             </button>
             <div class="dropdown__content">Равным образом, убежденность некоторых оппонентов создает предпосылки для дальнейших направлений развития. В своем стремлении улучшить пользовательский опыт мы упускаем, что ключевые особенности структуры проекта, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут указаны как претенденты на роль ключевых факторов.
             </div>
           </div>
           <div class="dropdown content__dropdown">
-            <button class="dropdown__button" type="button">
-              <h4 class="dropdown__heading">Как найти настоящего остеопата?
-              </h4>
-              <span class="dropdown__icon">
+            <button class="btn btn--cross dropdown__btn" type="button">Как найти настоящего остеопата?
+              <span class="cross btn__cross">
               </span>
             </button>
             <div class="dropdown__content">Равным образом, убежденность некоторых оппонентов создает предпосылки для дальнейших направлений развития. В своем стремлении улучшить пользовательский опыт мы упускаем, что ключевые особенности структуры проекта, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут указаны как претенденты на роль ключевых факторов.
             </div>
           </div>
           <div class="dropdown content__dropdown">
-            <button class="dropdown__button" type="button">
-              <h4 class="dropdown__heading">Не опасна ли остеопатия для беременных и малышей?
-              </h4>
-              <span class="dropdown__icon">
+            <button class="btn btn--cross dropdown__btn" type="button">Не опасна ли остеопатия для беременных и малышей?
+              <span class="cross btn__cross">
               </span>
             </button>
             <div class="dropdown__content">Равным образом, убежденность некоторых оппонентов создает предпосылки для дальнейших направлений развития. В своем стремлении улучшить пользовательский опыт мы упускаем, что ключевые особенности структуры проекта, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут указаны как претенденты на роль ключевых факторов.
             </div>
           </div>
           <div class="dropdown content__dropdown">
-            <button class="dropdown__button" type="button">
-              <h4 class="dropdown__heading">Сколько длится сеанс?
-              </h4>
-              <span class="dropdown__icon">
+            <button class="btn btn--cross dropdown__btn" type="button">Сколько длится сеанс?
+              <span class="cross btn__cross">
               </span>
             </button>
             <div class="dropdown__content">Равным образом, убежденность некоторых оппонентов создает предпосылки для дальнейших направлений развития. В своем стремлении улучшить пользовательский опыт мы упускаем, что ключевые особенности структуры проекта, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут указаны как претенденты на роль ключевых факторов.
@@ -182,7 +172,7 @@
       <div class="footer__wrap">
         <div class="footer__top">
           <div class="footer__company">
-            <a class="logo logo--footer footer__logo" title="Вернуться на главную страницу" href="index.html">
+            <a class="logo logo--footer footer__logo" title="Вернуться на главную страницу" href="main.html">
               <img class="logo__image" src="./assets/images/logo.svg" alt=" ">
             </a>
             <div class="person person--footer footer__person">
@@ -202,7 +192,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="noopener">
+                <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="nofollow noopener">
                   <svg class="social__icon" width="20" height="20" aria-hidden="true">
                     <use xlink:href="./assets/sprites/svg/sprite.svg#instagram"></use>
                   </svg>
@@ -221,44 +211,44 @@
                 </a>
               </p>
             </div>
-            <div class="footer__nav">
+            <div class="footer__nav" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a href="#">Главная
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Главная
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">О докторе
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">О докторе
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Остеопрактика
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Остеопрактика
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Биологическое центрирование
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Биологическое центрирование
                   </a>
                 </li>
               </ul>
               <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a href="#">Остеопатия
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Остеопатия
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Вопрос-ответ
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Вопрос-ответ
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Отзывы
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Отзывы
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Полезная информация
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Полезная информация
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Контакты
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Контакты
                   </a>
                 </li>
               </ul>

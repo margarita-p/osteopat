@@ -27,7 +27,7 @@
     <header class="header">
       <div class="header__wrap">
         <div class="header__top">
-          <a class="logo logo--header header__logo" title="Вернуться на главную страницу" href="index.html">
+          <a class="logo logo--header header__logo" title="Вернуться на главную страницу" href="main.html">
             <picture class="logo_picture">
               <source media="(min-width: 768px)" srcset="./assets/images/logo.svg"><img class="logo__image" src="./assets/images/logo-sm.svg" alt="Остеопрактика">
             </picture>
@@ -44,59 +44,59 @@
             <li class="phone-header__item">
               <span class="phone-header__descr">Севастополь
               </span>
-              <a class="phone-header__number" href="tel:79785032856"><span>+7 (978)</span> 503-28-56
+              <a class="phone-header__number" href="tel:79785032856">+7 (978) <span>503-28-56</span>
               </a>
             </li>
             <li class="phone-header__item">
               <span class="phone-header__descr">Санкт-Петербург
               </span>
-              <a class="phone-header__number" href="tel:78121234567"><span>+7 (812)</span> 123-45-67
+              <a class="phone-header__number" href="tel:78121234567">+7 (812) <span>123-45-67</span>
               </a>
             </li>
           </ul>
-          <button class="button-nav header__button-nav" aria-label="Открыть меню" type="button">
-            <span class="button-nav__icon">
-              <span class="button-nav__icon-items">
+          <button class="btn-nav header__button-nav" aria-label="Открыть меню" type="button">
+            <span class="btn-nav__icon">
+              <span class="btn-nav__icon-items">
               </span>
             </span>
           </button>
         </div>
-        <nav class="header__main-nav">
+        <nav class="header__main-nav" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
           <ul class="main-nav">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="main.html" itemprop="url">Главная
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">О докторе
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#" itemprop="url">О докторе
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Остеопрактика
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#" itemprop="url">Остеопрактика
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Биологическое центрирование
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#" itemprop="url">Биологическое центрирование
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Остеопатия
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="category.html" itemprop="url">Остеопатия
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="faq.html">Вопрос-ответ
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="faq.html" itemprop="url">Вопрос-ответ
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="reviews.html">Отзывы
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="reviews.html" itemprop="url">Отзывы
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="info.html">Полезная информация
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="info.html" itemprop="url">Полезная информация
               </a>
             </li>
-            <li class="main-nav__item active">
-              <a class="main-nav__link" href="contacts.html">Контакты
+            <li class="main-nav__item active" itemprop="name">
+              <a class="main-nav__link" href="contacts.html" itemprop="url">Контакты
               </a>
             </li>
           </ul>
@@ -104,13 +104,13 @@
             <li class="phone-header__item">
               <span class="phone-header__descr">Севастополь
               </span>
-              <a class="phone-header__number" href="tel:79785032856"><span>+7 (978)</span> 503-28-56
+              <a class="phone-header__number" href="tel:79785032856">+7 (978) <span>503-28-56</span>
               </a>
             </li>
             <li class="phone-header__item">
               <span class="phone-header__descr">Санкт-Петербург
               </span>
-              <a class="phone-header__number" href="tel:78121234567"><span>+7 (812)</span> 123-45-67
+              <a class="phone-header__number" href="tel:78121234567">+7 (812) <span>123-45-67</span>
               </a>
             </li>
           </ul>
@@ -142,7 +142,7 @@
                   </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="noopener">
+                  <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="nofollow noopener">
                     <svg class="social__icon" width="20" height="20" aria-hidden="true">
                       <use xlink:href="./assets/sprites/svg/sprite.svg#instagram"></use>
                     </svg>
@@ -151,66 +151,99 @@
               </ul>
             </div>
           </div>
-          <div class="card-form contacts__card-form">
-            <h3 class="card-form__heading">Обратная связь
+          <div class="form-card contacts__form-card">
+            <h3 class="form-card__heading">Обратная связь
             </h3>
-            <form class="content-form" action="/" method="post" accept-charset="UTF-8">
-              <div class="content-form__field-group">
-                <label class="field field--icon content-form__field">
-                  <span class="hidden">Имя пользователя
-                  </span>
-                  <span class="field__icon">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
-                    </svg>
-                  </span>
-                  <input class="field__input" tabindex="0" placeholder="Имя" name="userName" required type="text">
-                </label>
-                <label class="field field--icon content-form__field">
-                  <span class="hidden">Телефон
-                  </span>
-                  <span class="field__icon">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/sprites/svg/sprite.svg#phone"></use>
-                    </svg>
-                  </span>
-                  <input class="field__input" tabindex="0" placeholder="Телефон" name="phone" required type="tel">
-                </label>
-                <label class="field field--icon content-form__field">
-                  <span class="hidden">Вопрос
-                  </span>
-                  <span class="field__icon">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/sprites/svg/sprite.svg#message"></use>
-                    </svg>
-                  </span>
-                  <textarea class="field__input" tabindex="0" placeholder="Сообщение" name="message" required>
-                  </textarea>
-                </label>
-              </div>
-              <div class="content-form__personal">
-                <label class="checkbox checkbox--small">
-                  <input class="hidden checkbox__input" required type="checkbox">
-                  <span class="checkbox__label">Согласие на обработку персональных данных
-                  </span>
-                </label>
-              </div>
-              <div class="content-form__submit">
-                <button class="btn btn--bg-primary" type="submit">Отправить
-                </button>
-              </div>
-            </form>
+            <div class="form-card__content">
+              <form class="content-form" action="/" method="post" accept-charset="UTF-8">
+                <div class="content-form__inner">
+                  <div class="content-form__field-group">
+                    <label class="field field--icon content-form__field">
+                      <span class="hidden">Имя пользователя
+                      </span>
+                      <span class="field__icon">
+                        <svg width="20" height="20">
+                          <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
+                        </svg>
+                      </span>
+                      <input class="field__input" tabindex="0" placeholder="Имя" name="userName" required type="text" aria-invalid="false">
+                    </label>
+                    <label class="field field--icon content-form__field">
+                      <span class="hidden">Телефон
+                      </span>
+                      <span class="field__icon">
+                        <svg width="20" height="20">
+                          <use xlink:href="./assets/sprites/svg/sprite.svg#phone"></use>
+                        </svg>
+                      </span>
+                      <input class="field__input" tabindex="0" placeholder="Телефон" name="phone" type="tel" aria-required="true" aria-invalid="false">
+                    </label>
+                    <label class="field field--icon content-form__field">
+                      <span class="hidden">Вопрос
+                      </span>
+                      <span class="field__icon">
+                        <svg width="20" height="20">
+                          <use xlink:href="./assets/sprites/svg/sprite.svg#message"></use>
+                        </svg>
+                      </span>
+                      <textarea class="field__input" tabindex="0" placeholder="Сообщение" name="message" aria-required="true" aria-invalid="false">
+                      </textarea>
+                    </label>
+                  </div>
+                  <div class="content-form__personal">
+                    <label class="checkbox checkbox--small">
+                      <input class="hidden checkbox__input" required type="checkbox" aria-required="true" aria-invalid="false">
+                      <span class="checkbox__label">Согласие на обработку персональных данных
+                      </span>
+                    </label>
+                  </div>
+                  <div class="content-form__submit">
+                    <label class="btn btn--submit btn--bg-primary">
+                      <input class="hidden" type="submit">
+                      Отправить
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
+          <div class="cotacts__dots"></div>
         </div>
       </div>
       <div class="map content__map" id="map">
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+        <script>
+          ymaps.ready(function () {
+            var map = new ymaps.Map('map', {
+              center: [44.579352, 33.520716],
+              zoom: 18,
+              scrollZoom: false,
+              controls: []
+            }, {
+              searchControlProvider: 'yandex#search'
+            }),
+            Placemark = new ymaps.Placemark([44.579352, 33.520716], {
+              balloonContent: 'г. Севастополь, пр. Генерала Острякова, 15, оф., 41'
+            }, {
+              iconLayout: 'default#image',
+              iconImageHref: 'assets/images/icon.png',
+              iconImageSize: [30, 30],
+              iconImageOffset: [-15, -40],
+            });
+            map.geoObjects.add(Placemark);
+            map.behaviors.disable('scrollZoom');
+            map.controls.add('zoomControl');
+            var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+            map.controls.get('zoomControl').options.set('size', 'small');
+          });
+        </script>
       </div>
     </main>
     <footer class="footer">
       <div class="footer__wrap">
         <div class="footer__top">
           <div class="footer__company">
-            <a class="logo logo--footer footer__logo" title="Вернуться на главную страницу" href="index.html">
+            <a class="logo logo--footer footer__logo" title="Вернуться на главную страницу" href="main.html">
               <img class="logo__image" src="./assets/images/logo.svg" alt=" ">
             </a>
             <div class="person person--footer footer__person">
@@ -230,7 +263,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="noopener">
+                <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="nofollow noopener">
                   <svg class="social__icon" width="20" height="20" aria-hidden="true">
                     <use xlink:href="./assets/sprites/svg/sprite.svg#instagram"></use>
                   </svg>
@@ -249,44 +282,44 @@
                 </a>
               </p>
             </div>
-            <div class="footer__nav">
+            <div class="footer__nav" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a href="#">Главная
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Главная
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">О докторе
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">О докторе
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Остеопрактика
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Остеопрактика
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Биологическое центрирование
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Биологическое центрирование
                   </a>
                 </li>
               </ul>
               <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a href="#">Остеопатия
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Остеопатия
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Вопрос-ответ
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Вопрос-ответ
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Отзывы
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Отзывы
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Полезная информация
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Полезная информация
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Контакты
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Контакты
                   </a>
                 </li>
               </ul>
