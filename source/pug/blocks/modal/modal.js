@@ -37,11 +37,17 @@ for (let i = 0; i < btnsOpenAppointment.length; i += 1) {
   });
 }
 
-// включает модальное окно видео
+const openVideo = () => {
+  video.classList.add(ACTIVE);
+}
 
-// btnVideo.addEventListener('click', () => {
-//   video.classList.add(ACTIVE);
-// });
+const onBtnVideoClick = (e) => {
+  e.preventDefault();
+  openVideo();
+}
+
+// включает модальное окно видео
+btnVideo.addEventListener('click', onBtnVideoClick);
 
 // Закрывает модальное окно при нажатии экскейп
 const onEscKeyup = e => {

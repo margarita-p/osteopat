@@ -17,8 +17,8 @@ const config = {
     spriteSvg     : srcPath + '/assets/sprites/svg/**/*.svg',
     fonts         : srcPath + '/assets/fonts/**/*',
     favicon       : srcPath + '/assets/favicon/**/*',
-    sassCopy      : srcPath + 'sass/**/*.scss',
-    sassCopyBlock : srcPath + 'pug/**/*.scss',
+    sassCopy      : srcPath + '/sass/**/*.scss',
+    sassCopyBlock : srcPath + '/pug/**/*.scss',
     libScripts    : [
                       // 'node_modules/jquery/dist/jquery.js',
                       './node_modules/object-fit-images/dist/ofi.js',
@@ -46,8 +46,8 @@ const config = {
     favicon       : destPath + '/assets/favicon',
     spriteSvg     : destPath + '/assets/sprites/svg/',
     upload        : destPath + '/assets/upload',
-    sassCopy      : destPath + '/scss',
-    sassCopyBlock : destPath + '/scss/blocks',
+    sassCopy      : destPath + '/sass',
+    sassCopyBlock : destPath + '/sass/blocks',
     zip           : 'D:/projects/zip/',
   },
   watch: {
