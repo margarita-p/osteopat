@@ -50,17 +50,14 @@
 }
 
 @include respond-to(medium) {
-  .reception {
-    background-image: url('../assets/images/spine.png');
-    background-size: contain;
-    background-position: 60%;
-    background-repeat: no-repeat;
-  }
-
   .reception__wrap {
     flex-direction: row;
     padding-top: 40px;
     padding-bottom: 40px;
+    background-image: url('../assets/images/spine.png');
+    background-size: contain;
+    background-position: 67%;
+    background-repeat: no-repeat;
   }
 
   .reception__text-wrap {
@@ -78,7 +75,7 @@
     margin-bottom: 20px;
   }
 
-  .reception__card-form {
+  .reception__form-card {
     flex-grow: 1;
     width: 50%;
     max-width: 490px;
@@ -99,7 +96,7 @@
     font-size: 48px;
   }
 
-  .reception__card-form {
+  .reception__form-card {
     margin-top: -68px;
     margin-bottom: -58px;
   }

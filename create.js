@@ -55,14 +55,13 @@ if (blockName) {
           });
         }
         if (extention == 'js') {
-          scriptFileImport = 'require(\'../pug/blocks/' + blockName + '/' + blockName + '\');';
-          fileContent = 'import {$, $$} from \'../../scripts/selector\';' + '\n' + 'import {TABLET, ESC, ENTER, ACTIVE} from \'../../scripts/const\';';
-          fs.appendFile('source/scripts/entry.js', scriptFileImport + '\n', function (err) {
-            if (err) {
-              return console.log('entry.js НЕ обновлён: ' + err);
-            }
-            console.log('entry.js обновлён');
-          });
+          // scriptFileImport = 'require(\'../pug/blocks/' + blockName + '/' + blockName + '\');';
+          // fs.appendFile('source/scripts/entry.js', scriptFileImport + '\n', function (err) {
+          //   if (err) {
+          //     return console.log('entry.js НЕ обновлён: ' + err);
+          //   }
+          //   console.log('entry.js обновлён');
+          // });
         }
 
         if (fileExist(filePath) === false) {

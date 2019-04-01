@@ -27,7 +27,7 @@
     <header class="header">
       <div class="header__wrap">
         <div class="header__top">
-          <a class="logo logo--header header__logo" title="Вернуться на главную страницу" href="index.html">
+          <a class="logo logo--header header__logo" title="Вернуться на главную страницу" href="main.html">
             <picture class="logo_picture">
               <source media="(min-width: 768px)" srcset="./assets/images/logo.svg"><img class="logo__image" src="./assets/images/logo-sm.svg" alt="Остеопрактика">
             </picture>
@@ -44,59 +44,59 @@
             <li class="phone-header__item">
               <span class="phone-header__descr">Севастополь
               </span>
-              <a class="phone-header__number" href="tel:79785032856"><span>+7 (978)</span> 503-28-56
+              <a class="phone-header__number" href="tel:79785032856">+7 (978) <span>503-28-56</span>
               </a>
             </li>
             <li class="phone-header__item">
               <span class="phone-header__descr">Санкт-Петербург
               </span>
-              <a class="phone-header__number" href="tel:78121234567"><span>+7 (812)</span> 123-45-67
+              <a class="phone-header__number" href="tel:78121234567">+7 (812) <span>123-45-67</span>
               </a>
             </li>
           </ul>
-          <button class="button-nav header__button-nav" aria-label="Открыть меню" type="button">
-            <span class="button-nav__icon">
-              <span class="button-nav__icon-items">
+          <button class="btn-nav header__button-nav" aria-label="Открыть меню" type="button">
+            <span class="btn-nav__icon">
+              <span class="btn-nav__icon-items">
               </span>
             </span>
           </button>
         </div>
-        <nav class="header__main-nav">
+        <nav class="header__main-nav" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
           <ul class="main-nav">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="main.html" itemprop="url">Главная
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">О докторе
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#" itemprop="url">О докторе
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Остеопрактика
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#" itemprop="url">Остеопрактика
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Биологическое центрирование
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="#" itemprop="url">Биологическое центрирование
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Остеопатия
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="category.html" itemprop="url">Остеопатия
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="faq.html">Вопрос-ответ
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="faq.html" itemprop="url">Вопрос-ответ
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="reviews.html">Отзывы
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="reviews.html" itemprop="url">Отзывы
               </a>
             </li>
-            <li class="main-nav__item active">
-              <a class="main-nav__link" href="info.html">Полезная информация
+            <li class="main-nav__item active" itemprop="name">
+              <a class="main-nav__link" href="info.html" itemprop="url">Полезная информация
               </a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="contacts.html">Контакты
+            <li class="main-nav__item" itemprop="name">
+              <a class="main-nav__link" href="contacts.html" itemprop="url">Контакты
               </a>
             </li>
           </ul>
@@ -104,13 +104,13 @@
             <li class="phone-header__item">
               <span class="phone-header__descr">Севастополь
               </span>
-              <a class="phone-header__number" href="tel:79785032856"><span>+7 (978)</span> 503-28-56
+              <a class="phone-header__number" href="tel:79785032856">+7 (978) <span>503-28-56</span>
               </a>
             </li>
             <li class="phone-header__item">
               <span class="phone-header__descr">Санкт-Петербург
               </span>
-              <a class="phone-header__number" href="tel:78121234567"><span>+7 (812)</span> 123-45-67
+              <a class="phone-header__number" href="tel:78121234567">+7 (812) <span>123-45-67</span>
               </a>
             </li>
           </ul>
@@ -124,184 +124,177 @@
         <h1 class="content__heading">Полезная информация</h1>
         <ul class="content__card-list">
           <li class="content__card-item">
-            <article class="card-info">
-              <a class="card-info__image-link" href="#">
-                <img class="card-info__image" src="./assets/images/info01.jpg" alt=" ">
+            <article class="info-card">
+              <a class="info-card__image-link" href="#"><img class="info-card__image" src="./assets/upload/info01.jpg" alt="">
               </a>
-              <div class="card-info__content">
-                <h3 class="card-info__heading">
+              <div class="info-card__content">
+                <h3 class="info-card__heading">
                   <a href="#">Медицина здоровых людей. Вчера, сегодня, завтра
                   </a>
                 </h3>
-                <p class="card-info__text">В каком мире мы живем? В постоянно меняющемся и развивающемся, подкидывающем нам неожиданные события – радостные и печальные, в мире технологий
+                <p class="info-card__text">В каком мире мы живем? В постоянно меняющемся и развивающемся, подкидывающем нам неожиданные события – радостные и печальные, в мире технологий
                 </p>
-                <div class="card-info__footer">
-                  <time class="card-info__time">5 марта 2019
-                  </time>
+                <div class="info-card__footer">
+                  <span class="info-card__time">5 марта 2019
+                  </span>
                 </div>
               </div>
             </article>
           </li>
           <li class="content__card-item">
-            <article class="card-info">
-              <a class="card-info__image-link" href="#">
-                <img class="card-info__image" src="./assets/images/info02.jpg" alt=" ">
+            <article class="info-card">
+              <a class="info-card__image-link" href="#"><img class="info-card__image" src="./assets/upload/info02.jpg" alt="">
               </a>
-              <div class="card-info__content">
-                <h3 class="card-info__heading">
+              <div class="info-card__content">
+                <h3 class="info-card__heading">
                   <a href="#">Остеопатия в офтальмологии
                   </a>
                 </h3>
-                <p class="card-info__text">Остеопатия как новое направление традиционной медицины использует комплексный метод. Конечно, здесь мы будем говорить только о терапии. Физически
+                <p class="info-card__text">Остеопатия как новое направление традиционной медицины использует комплексный метод. Конечно, здесь мы будем говорить только о терапии. Физически
                 </p>
-                <div class="card-info__footer">
-                  <time class="card-info__time">5 марта 2019
-                  </time>
+                <div class="info-card__footer">
+                  <span class="info-card__time">5 марта 2019
+                  </span>
                 </div>
               </div>
             </article>
           </li>
           <li class="content__card-item">
-            <article class="card-info">
-              <a class="card-info__image-link" href="#">
-                <img class="card-info__image" src="./assets/images/info03.jpg" alt=" ">
+            <article class="info-card">
+              <a class="info-card__image-link" href="#"><img class="info-card__image" src="./assets/upload/info03.jpg" alt="">
               </a>
-              <div class="card-info__content">
-                <h3 class="card-info__heading">
+              <div class="info-card__content">
+                <h3 class="info-card__heading">
                   <a href="#">Лечение и профилактика стрессовых переломов
                   </a>
                 </h3>
-                <p class="card-info__text">По статистике  футбол является самым травмоопасным видом спорта. Это связано  с частыми столкновениями игроков на высокой скорости,  с ротацио
+                <p class="info-card__text">По статистике  футбол является самым травмоопасным видом спорта. Это связано  с частыми столкновениями игроков на высокой скорости,  с ротацио
                 </p>
-                <div class="card-info__footer">
-                  <time class="card-info__time">5 марта 2019
-                  </time>
+                <div class="info-card__footer">
+                  <span class="info-card__time">5 марта 2019
+                  </span>
                 </div>
               </div>
             </article>
           </li>
           <li class="content__card-item">
-            <article class="card-info">
-              <a class="card-info__image-link" href="#">
-                <img class="card-info__image" src="./assets/images/info03.jpg" alt=" ">
+            <article class="info-card">
+              <a class="info-card__image-link" href="#"><img class="info-card__image" src="./assets/upload/info03.jpg" alt="">
               </a>
-              <div class="card-info__content">
-                <h3 class="card-info__heading">
+              <div class="info-card__content">
+                <h3 class="info-card__heading">
                   <a href="#">Лечение и профилактика стрессовых переломов
                   </a>
                 </h3>
-                <p class="card-info__text">По статистике  футбол является самым травмоопасным видом спорта. Это связано  с частыми столкновениями игроков на высокой скорости,  с ротацио
+                <p class="info-card__text">По статистике  футбол является самым травмоопасным видом спорта. Это связано  с частыми столкновениями игроков на высокой скорости,  с ротацио
                 </p>
-                <div class="card-info__footer">
-                  <time class="card-info__time">5 марта 2019
-                  </time>
+                <div class="info-card__footer">
+                  <span class="info-card__time">5 марта 2019
+                  </span>
                 </div>
               </div>
             </article>
           </li>
           <li class="content__card-item">
-            <article class="card-info">
-              <a class="card-info__image-link" href="#">
-                <img class="card-info__image" src="./assets/images/info01.jpg" alt=" ">
+            <article class="info-card">
+              <a class="info-card__image-link" href="#"><img class="info-card__image" src="./assets/upload/info01.jpg" alt="">
               </a>
-              <div class="card-info__content">
-                <h3 class="card-info__heading">
+              <div class="info-card__content">
+                <h3 class="info-card__heading">
                   <a href="#">Медицина здоровых людей. Вчера, сегодня, завтра
                   </a>
                 </h3>
-                <p class="card-info__text">В каком мире мы живем? В постоянно меняющемся и развивающемся, подкидывающем нам неожиданные события – радостные и печальные, в мире технологий
+                <p class="info-card__text">В каком мире мы живем? В постоянно меняющемся и развивающемся, подкидывающем нам неожиданные события – радостные и печальные, в мире технологий
                 </p>
-                <div class="card-info__footer">
-                  <time class="card-info__time">5 марта 2019
-                  </time>
+                <div class="info-card__footer">
+                  <span class="info-card__time">5 марта 2019
+                  </span>
                 </div>
               </div>
             </article>
           </li>
           <li class="content__card-item">
-            <article class="card-info">
-              <a class="card-info__image-link" href="#">
-                <img class="card-info__image" src="./assets/images/info02.jpg" alt=" ">
+            <article class="info-card">
+              <a class="info-card__image-link" href="#"><img class="info-card__image" src="./assets/upload/info02.jpg" alt="">
               </a>
-              <div class="card-info__content">
-                <h3 class="card-info__heading">
+              <div class="info-card__content">
+                <h3 class="info-card__heading">
                   <a href="#">Остеопатия в офтальмологии
                   </a>
                 </h3>
-                <p class="card-info__text">Остеопатия как новое направление традиционной медицины использует комплексный метод. Конечно, здесь мы будем говорить только о терапии. Физически
+                <p class="info-card__text">Остеопатия как новое направление традиционной медицины использует комплексный метод. Конечно, здесь мы будем говорить только о терапии. Физически
                 </p>
-                <div class="card-info__footer">
-                  <time class="card-info__time">5 марта 2019
-                  </time>
+                <div class="info-card__footer">
+                  <span class="info-card__time">5 марта 2019
+                  </span>
                 </div>
               </div>
             </article>
           </li>
           <li class="content__card-item">
-            <article class="card-info">
-              <a class="card-info__image-link" href="#">
-                <img class="card-info__image" src="./assets/images/info01.jpg" alt=" ">
+            <article class="info-card">
+              <a class="info-card__image-link" href="#"><img class="info-card__image" src="./assets/upload/info01.jpg" alt="">
               </a>
-              <div class="card-info__content">
-                <h3 class="card-info__heading">
+              <div class="info-card__content">
+                <h3 class="info-card__heading">
                   <a href="#">Медицина здоровых людей. Вчера, сегодня, завтра
                   </a>
                 </h3>
-                <p class="card-info__text">В каком мире мы живем? В постоянно меняющемся и развивающемся, подкидывающем нам неожиданные события – радостные и печальные, в мире технологий
+                <p class="info-card__text">В каком мире мы живем? В постоянно меняющемся и развивающемся, подкидывающем нам неожиданные события – радостные и печальные, в мире технологий
                 </p>
-                <div class="card-info__footer">
-                  <time class="card-info__time">5 марта 2019
-                  </time>
+                <div class="info-card__footer">
+                  <span class="info-card__time">5 марта 2019
+                  </span>
                 </div>
               </div>
             </article>
           </li>
           <li class="content__card-item">
-            <article class="card-info">
-              <a class="card-info__image-link" href="#">
-                <img class="card-info__image" src="./assets/images/info02.jpg" alt=" ">
+            <article class="info-card">
+              <a class="info-card__image-link" href="#"><img class="info-card__image" src="./assets/upload/info02.jpg" alt="">
               </a>
-              <div class="card-info__content">
-                <h3 class="card-info__heading">
+              <div class="info-card__content">
+                <h3 class="info-card__heading">
                   <a href="#">Остеопатия в офтальмологии
                   </a>
                 </h3>
-                <p class="card-info__text">Остеопатия как новое направление традиционной медицины использует комплексный метод. Конечно, здесь мы будем говорить только о терапии. Физически
+                <p class="info-card__text">Остеопатия как новое направление традиционной медицины использует комплексный метод. Конечно, здесь мы будем говорить только о терапии. Физически
                 </p>
-                <div class="card-info__footer">
-                  <time class="card-info__time">5 марта 2019
-                  </time>
+                <div class="info-card__footer">
+                  <span class="info-card__time">5 марта 2019
+                  </span>
                 </div>
               </div>
             </article>
           </li>
           <li class="content__card-item">
-            <article class="card-info">
-              <a class="card-info__image-link" href="#">
-                <img class="card-info__image" src="./assets/images/info03.jpg" alt=" ">
+            <article class="info-card">
+              <a class="info-card__image-link" href="#"><img class="info-card__image" src="./assets/upload/info03.jpg" alt="">
               </a>
-              <div class="card-info__content">
-                <h3 class="card-info__heading">
+              <div class="info-card__content">
+                <h3 class="info-card__heading">
                   <a href="#">Лечение и профилактика стрессовых переломов
                   </a>
                 </h3>
-                <p class="card-info__text">По статистике  футбол является самым травмоопасным видом спорта. Это связано  с частыми столкновениями игроков на высокой скорости,  с ротацио
+                <p class="info-card__text">По статистике  футбол является самым травмоопасным видом спорта. Это связано  с частыми столкновениями игроков на высокой скорости,  с ротацио
                 </p>
-                <div class="card-info__footer">
-                  <time class="card-info__time">5 марта 2019
-                  </time>
+                <div class="info-card__footer">
+                  <span class="info-card__time">5 марта 2019
+                  </span>
                 </div>
               </div>
             </article>
           </li>
         </ul>
+        <button class="btn btn--border content__bottom-btn" type="button">Показать ещё
+        </button>
       </div>
     </main>
     <footer class="footer">
       <div class="footer__wrap">
         <div class="footer__top">
           <div class="footer__company">
-            <a class="logo logo--footer footer__logo" title="Вернуться на главную страницу" href="index.html">
+            <a class="logo logo--footer footer__logo" title="Вернуться на главную страницу" href="main.html">
               <img class="logo__image" src="./assets/images/logo.svg" alt=" ">
             </a>
             <div class="person person--footer footer__person">
@@ -321,7 +314,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="noopener">
+                <a class="social__link" title="Мы в Инстаграме" target="_blank" href="#" rel="nofollow noopener">
                   <svg class="social__icon" width="20" height="20" aria-hidden="true">
                     <use xlink:href="./assets/sprites/svg/sprite.svg#instagram"></use>
                   </svg>
@@ -340,44 +333,44 @@
                 </a>
               </p>
             </div>
-            <div class="footer__nav">
+            <div class="footer__nav" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a href="#">Главная
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Главная
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">О докторе
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">О докторе
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Остеопрактика
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Остеопрактика
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Биологическое центрирование
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Биологическое центрирование
                   </a>
                 </li>
               </ul>
               <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                  <a href="#">Остеопатия
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Остеопатия
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Вопрос-ответ
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Вопрос-ответ
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Отзывы
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Отзывы
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Полезная информация
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Полезная информация
                   </a>
                 </li>
-                <li class="footer__nav-item">
-                  <a href="#">Контакты
+                <li class="footer__nav-item" itemprop="name">
+                  <a href="#" itemprop="url">Контакты
                   </a>
                 </li>
               </ul>

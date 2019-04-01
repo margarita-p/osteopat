@@ -20,4 +20,6 @@ mixin modal(data)
                         class: 'modal__heading',
                         text: data.heading,
                     })
+                if data.video
+                    iframe.modal__video(width='560' height='315' src=data.video allowfullscreen)
                 block

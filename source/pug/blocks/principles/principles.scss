@@ -12,6 +12,7 @@
 }
 
 .principles__heading {
+  margin-bottom: 24px;
   color: inherit;
   font-size: 28px;
   font-weight: 900;
@@ -58,7 +59,7 @@
     font-size: 37px;
   }
 
-  .principles__card-form {
+  .principles__form-card {
     max-width: 490px;
     margin-bottom: -48px;
   }
@@ -86,6 +87,7 @@
   }
 
   .principles__heading {
+    margin-bottom: 30px;
     font-size: 48px;
   }
 
@@ -98,7 +100,9 @@
     font-size: 45px;
   }
 
-  .principles__card-form {
+  .principles__form-card {
+    position: relative;
+    z-index: 1;
     max-width: 490px;
     margin-bottom: -58px;
   }

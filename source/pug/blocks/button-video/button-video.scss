@@ -1,6 +1,12 @@
 .btn-video {
   display: flex;
   align-items: center;
+
+  @include hover {
+    .btn-video__text {
+      opacity: 0.6;
+    }
+  }
 }
 
 .btn-video__text,

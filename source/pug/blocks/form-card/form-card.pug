@@ -1,0 +1,15 @@
+mixin form-card(data)
+    +el({
+        class: 'form-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        if data.heading
+            +el({
+                tag: 'h3',
+                class: 'form-card__heading',
+                text: data.heading,
+            })
+        .form-card__content
+            block

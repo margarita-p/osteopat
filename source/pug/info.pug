@@ -70,9 +70,14 @@ block content
             ul.content__card-list
                 each item in cardsInfo
                     li.content__card-item
-                        +card-info({
+                        +info-card({
                             image: item.image,
                             heading: item.heading,
                             text: item.text,
                             time: item.time
                         })
+            +button({
+                mix: 'content__bottom-btn',
+                mod: 'border',
+                text: 'Показать ещё',
+            })

@@ -3,13 +3,13 @@ $btn-burger-height: 40px;
 $btn-burger-distanse: 8px;
 $btn-burger-thickness: 2px;
 
-.button-nav {
+.btn-nav {
   width: $btn-burger-width;
   height: $btn-burger-height;
   padding: 6px;
 
   &.active {
-    .button-nav__icon-items {
+    .btn-nav__icon-items {
       background-color: transparent;
 
       &::before {
@@ -23,13 +23,13 @@ $btn-burger-thickness: 2px;
   }
 }
 
-.button-nav__icon {
+.btn-nav__icon {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.button-nav__icon-items {
+.btn-nav__icon-items {
   @include icon-burger($btn-burger-thickness, color(black), $btn-burger-distanse);
 
   &::before {

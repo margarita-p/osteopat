@@ -1,0 +1,17 @@
+.teaser {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@include respond-to(medium) {
+  .teaser {
+    font-size: 17px;
+  }
+}
+
+@include respond-to(large) {
+  .teaser {
+    font-size: 18px;
+  }
+}

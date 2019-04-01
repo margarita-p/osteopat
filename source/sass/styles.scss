@@ -4,14 +4,20 @@
 // global
 @import "./global/vars";
 @import "./global/functions";
-@import "./mixins/mixins";
+@import "./global/mixins/mixins";
 @import "./global/base";
-@import "./global/typography";
+@import "./global/default/default";
+@import "./global/animation";
+
+// blocks
 @import "./blocks/helpers";
 @import "./blocks/sticky-footer";
 @import "./blocks/content";
+@import "./blocks/article";
+@import "./blocks/category-article";
+@import "./blocks/teaser";
 
-// blocks
+// blocks pug
 @import "../pug/blocks/button/button";
 @import "../pug/blocks/button-nav/button-nav";
 @import "../pug/blocks/button-remove/button-remove";
@@ -27,25 +33,25 @@
 @import "../pug/blocks/header/header";
 @import "../pug/blocks/half-round/half-round";
 @import "../pug/blocks/intro/intro";
-@import "../pug/blocks/slogan/slogan";
 @import "../pug/blocks/price-order/price-order";
 @import "../pug/blocks/modal/modal";
 @import "../pug/blocks/picture/picture";
 @import "../pug/blocks/person/person";
 @import "../pug/blocks/problems/problems";
 @import "../pug/blocks/reception/reception";
-@import "../pug/blocks/card-form/card-form";
+@import "../pug/blocks/form-card/form-card";
 @import "../pug/blocks/content-form/content-form";
 @import "../pug/blocks/bio/bio";
 @import "../pug/blocks/principles/principles";
 @import "../pug/blocks/footer/footer";
 @import "../pug/blocks/social/social";
-
-@import "../pug/blocks/card-info/card-info";
-@import "../pug/blocks/card-reviews/card-reviews";
-@import "../pug/blocks/viewbar/viewbar";
+@import "../pug/blocks/info-card/info-card";
+@import "../pug/blocks/reviews-card/reviews-card";
 @import "../pug/blocks/lead/lead";
-
 @import "../pug/blocks/dropdown/dropdown";
 @import "../pug/blocks/contacts/contacts";
 @import "../pug/blocks/map/map";
+@import "../pug/blocks/category/category";
+@import "../pug/blocks/cross/cross";
+@import "../pug/blocks/breadcrumbs/breadcrumbs";
+@import "../pug/blocks/reviews/reviews";

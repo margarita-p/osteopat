@@ -3,7 +3,7 @@
 }
 
 .phone-header__item {
-  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .phone-header__descr,
@@ -12,16 +12,18 @@
 }
 
 .phone-header__descr {
+  margin-bottom: 5px;
   color: color(primary);
   font-size: 14px;
 }
 
 .phone-header__number {
-  font-size: 18px;
+  font-size: 14px;
   text-decoration: none;
 
   span {
-    font-size: 14px
+    font-size: 18px;
+    font-weight: 500;
   }
 }
 
@@ -32,9 +34,11 @@
 
   .phone-header__item {
     display: table-row;
+    margin-bottom: 0;
   }
 
   .phone-header__descr {
+    margin-bottom: 0;
     padding-right: 10px;
   }
 

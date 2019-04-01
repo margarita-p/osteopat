@@ -6,4 +6,30 @@ mixin map(data)
         js: data.js,
         id: 'map'
     })
-            //-script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A02d209c96ffea1bc9f5c86a928127626c9261f3a013dfd839d8fd7c2a581e524&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false")
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+
+        script.
+            ymaps.ready(function () {
+              var map = new ymaps.Map('map', {
+                center: [44.579352, 33.520716],
+                zoom: 18,
+                scrollZoom: false,
+                controls: []
+              }, {
+                searchControlProvider: 'yandex#search'
+              }),
+              Placemark = new ymaps.Placemark([44.579352, 33.520716], {
+                balloonContent: 'г. Севастополь, пр. Генерала Острякова, 15, оф., 41'
+              }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'assets/images/icon.png',
+                iconImageSize: [30, 30],
+                iconImageOffset: [-15, -40],
+              });
+
+              map.geoObjects.add(Placemark);
+              map.behaviors.disable('scrollZoom');
+              map.controls.add('zoomControl');
+              var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+              map.controls.get('zoomControl').options.set('size', 'small');
+            });

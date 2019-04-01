@@ -18,7 +18,7 @@
     "l:st": "npm run lint:styles",
     "lint": "npm run lint:styles && npm run lint:scripts",
     "l": "npm run lint",
-    "zip": "set NODE_ENV=production gulp build && gulp copy && gulp zip",
+    "zip": "set NODE_ENV=production gulp clean && gulp build && gulp copy && gulp sassCopy && gulp sassCopyBlock && gulp zip",
     "z": "npm run zip"
   },
   "keywords": [

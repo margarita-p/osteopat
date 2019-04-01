@@ -1,0 +1,62 @@
+// по умолчанию и для статей
+$heading-styles: (
+  small: (
+    h1: (fs: 24px, lh: 1.3, mb: 18px, fw: 400),
+    h2: (fs: 20px, lh: 1.3, mb: 12px, fw: 400),
+    h3: (fs: 18px, lh: 1.4, mb: 10px, fw: 400),
+    h4: (fs: 16px, lh: 1.5, mb: 8px,  fw: 500),
+    h5: (fs: 14px, lh: 1.5, mb: 6px,  fw: 500),
+    h6: (fs: 14px, lh: 1.5, mb: 4px,  fw: 500)
+  ),
+  medium: (
+    h1: (fs: 32px, mb: 24px),
+    h2: (fs: 24px, mb: 14px),
+    h3: (fs: 20px, mb: 12px),
+    h4: (fs: 18px, mb: 10px),
+    h5: (fs: 16px, mb: 8px),
+    h6: (fs: 16px, mb: 6px)
+  ),
+  large: (
+    h1: (fs: 36px, mb: 30px),
+    h2: (fs: 30px, mb: 16px),
+    h3: (fs: 24px, mb: 14px),
+    h4: (fs: 20px, mb: 12px),
+    h5: (fs: 18px, mb: 10px),
+    h6: (fs: 16px, mb: 8px)
+  ),
+);
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    margin-top: 0;
+    margin-bottom: get($heading-styles, small, h#{$i}, mb);
+    font-family: font(primary);
+    font-size: get($heading-styles, small, h#{$i}, fs);
+    font-style: normal;
+    font-weight: get($heading-styles, small, h#{$i}, fw);
+    line-height: get($heading-styles, small, h#{$i}, lh);
+    color: color(black);
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+@include respond-to(medium) {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      margin-bottom: get($heading-styles, large, h#{$i}, mb);
+      font-size: get($heading-styles, large, h#{$i}, fs);
+    }
+  }
+}
+
+@include respond-to(large) {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      margin-bottom: get($heading-styles, large, h#{$i}, mb);
+      font-size: get($heading-styles, large, h#{$i}, fs);
+    }
+  }
+}

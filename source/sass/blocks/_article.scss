@@ -1,0 +1,41 @@
+.article {
+  img {
+    border-radius: rad(sm);
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@include respond-to(medium) {
+  .article {
+    h1 {
+      font-size: 26px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .article {
+    h1 {
+      font-size: 30px;
+    }
+
+    .left {
+      float: right;
+      margin-left: 40px;
+    }
+
+    .right {
+      float: left;
+      margin-right: 40px;
+    }
+  }
+}

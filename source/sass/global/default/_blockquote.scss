@@ -1,0 +1,41 @@
+blockquote {
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 75px;
+  font-size: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: color(primary);
+  }
+}
+
+@include respond-to(medium) {
+  blockquote {
+    padding-left: 115px;
+    font-size: 16px;
+
+    &::before {
+      top: 15px;
+      width: 100px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  blockquote {
+    padding-left: 130px;
+    font-size: 17px;
+
+    &::before {
+      top: 16px;
+      width: 115px;
+    }
+  }
+}

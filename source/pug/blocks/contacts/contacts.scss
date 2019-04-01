@@ -1,9 +1,14 @@
+.contacts {
+  position: relative;
+  padding-bottom: 30px;
+}
+
 .contacts__image {
   overflow: hidden;
   width: 263px;
   height: 328px;
   margin-bottom: 30px;
-  border-radius: rad(md);
+  border-radius: rad(sm);
 
   img {
     width: 263px;
@@ -20,12 +25,8 @@
   }
 }
 
-.contacts__text-wrap {
-  margin-bottom: 20px;
-}
-
-.contacts__text {
-
+.contacts__content {
+  margin-bottom: 30px;
 }
 
 .contacts__phone {
@@ -36,49 +37,93 @@
 }
 
 .contacts__social {
-
+  margin-top: 20px;
+  transform: translate(-10px);
 }
 
-.contacts__card-form {
+.contacts__form-card {
   width: auto;
 }
 
+.cotacts__dots {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+  z-index: -1;
+  width: 110vw;
+  height: 110vw;
+  max-width: 540px;
+  max-height: 540px;
+  transform: translate(-50%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: rotate(-135deg);
+    width: 110vw;
+    height: 110vw;
+    max-width: 540px;
+    max-height: 540px;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg preserveAspectRatio='xMinYMax' fill='rgb(239,245,243)' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='2'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 10px 10px;
+  }
+}
+
 @include respond-to(620px) {
+  .contacts {
+    padding-bottom: 40px;
+  }
+
   .contacts__content {
     display: flex;
     flex-wrap: wrap;
     margin-right: auto;
+    margin-bottom: 40px;
   }
 
   .contacts__image {
     flex-shrink: 0;
+    margin-bottom: 0;
     margin-right: 40px;
   }
 
   .contacts__text-wrap {
-    margin-bottom: 20px;
     padding-top: 40px;
   }
 
-  .contacts__card-form {
+  .cotacts__dots {
+    top: 100px;
   }
 }
 
 @include respond-to(1024px) {
-  .contacts {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .contacts__content {
     margin-right: auto;
+    margin-bottom: 0;
   }
 
   .contacts__text-wrap {
   }
 
-  .contacts__card-form {
+  .contacts__form-card {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 380px;
+  }
+
+  .cotacts__dots {
+    top: auto;
+    bottom: 0;
+    z-index: -1;
+    height: 270px;
+    overflow: hidden;
+    transform: translate(-50%, calc(100% - 270px));
   }
 }
 
@@ -88,7 +133,7 @@
     margin-right: 50px;
   }
 
-  .contacts__card-form {
+  .contacts__form-card {
     width: 460px;
   }
 }

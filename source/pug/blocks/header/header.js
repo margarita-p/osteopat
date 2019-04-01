@@ -30,7 +30,6 @@ const onBtnOpenClick = e => {
 };
 
 const onEscKeyup = e => {
-  e.preventDefault();
   onEsc(e, close);
 };
 

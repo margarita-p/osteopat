@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+th,
+td {
+  width: 2%;
+  padding: 12px;
+  border: 1px solid color(light-gray);
+}
+
+th {
+  background-color: color(light);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+
+td {
+
+}
+
+@include respond-to(medium) {
+  th,
+  td {
+    padding: 16px;
+  }
+}
+
+@include respond-to(large) {
+
+}

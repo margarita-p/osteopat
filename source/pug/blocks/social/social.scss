@@ -9,7 +9,7 @@
     .social__link {
       @include hover {
         .social__icon {
-          fill: color(light-gray);
+          opacity: 0.6;
         }
       }
     }

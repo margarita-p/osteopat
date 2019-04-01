@@ -78,7 +78,7 @@ mixin footer(data)
                                 href: 'tel:78121234567',
                                 text: 'тел. +7 (812) 123-45-67'
                             })
-                    .footer__nav
+                    .footer__nav(role='navigation' aria-label='Дополнительное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
                         +el({
                             tag: 'ul',
                             class: 'footer__nav-list',
@@ -87,11 +87,11 @@ mixin footer(data)
                                 +el({
                                     tag: 'li',
                                     class: 'footer__nav-item',
-                                })
+                                })(itemprop='name')
                                     +el({
                                         tag: 'a',
                                         text: item,
-                                      })
+                                      })(itemprop='url')
                         +el({
                             tag: 'ul',
                             class: 'footer__nav-list',
@@ -100,11 +100,11 @@ mixin footer(data)
                                 +el({
                                     tag: 'li',
                                     class: 'footer__nav-item',
-                                })
+                                })(itemprop='name')
                                     +el({
                                         tag: 'a',
                                         text: item,
-                                    })
+                                    })(itemprop='url')
         .footer__bottom
             .footer__wrap
                 .footer__copyright

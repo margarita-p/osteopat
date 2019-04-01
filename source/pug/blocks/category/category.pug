@@ -1,0 +1,25 @@
+mixin category(data)
+    +el({
+        class: 'category',
+        mix: data.mix,
+        js: data.js,
+        mod: data.mod,
+    })&attributes(attributes)
+        +button({
+            mix: 'category__btn',
+            mod: 'cross',
+            text: 'Категории',
+            cross: true,
+        })
+        +el({
+            tag: 'ul',
+            class: 'category__list',
+        })
+            each item in data.items
+                li.category__item
+                    +el({
+                        tag: 'a',
+                        class: 'category__link',
+                        text: item.text,
+                        href: item.href
+                    })

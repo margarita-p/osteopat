@@ -1,0 +1,33 @@
+mixin info-card(data)
+    +el({
+        tag: 'article',
+        class: 'info-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'a',
+            class: 'info-card__image-link',
+        })
+            img.info-card__image(src='./assets/upload/' + data.image, alt='')
+        .info-card__content
+            +el({
+                tag: 'h3',
+                class: 'info-card__heading',
+            })
+                +el({
+                    tag: 'a',
+                    text: data.heading,
+                })
+            +el({
+                tag: 'p',
+                class: 'info-card__text',
+                text: data.text,
+            })
+            .info-card__footer
+                +el({
+                    tag: 'span',
+                    class: 'info-card__time',
+                    text: data.time,
+                })

@@ -1,0 +1,40 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Остеопрактика'
+    - var main = true
+    - var pageId = 1
+
+
+block content
+    main.content
+        +intro({
+            mix: 'content__section content__section--intro',
+        })
+        +problems({
+            mix: 'content__section content__section--problems',
+        })
+        +reception({
+            mix: 'content__section content__section--reception',
+        })
+        +bio({
+            mix: 'content__section content__section--bio',
+        })
+        +principles({
+            mix: 'content__section content__section--principles',
+        })
+
+    +modal({
+        mod: 'appointment',
+        heading: 'Записаться на <br>приём к&nbsp;остеопракту'
+    })
+        +content-form({
+            userName: true,
+            phone: true,
+            personalData: true,
+            submit: 'Записаться',
+        })
+    +modal({
+        mod: ['intro-video', 'video'],
+        video: 'https://youtu.be/UfVpoI5ksag'
+    })

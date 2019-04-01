@@ -1,0 +1,22 @@
+mixin breadcrumbs(data)
+    +el({
+        tag: 'nav',
+        class: 'breadcrumbs',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })(itemscope, itemtype='http://schema.org/SiteNavigationElement')&attributes(attributes)
+        +el({
+            tag: 'ul',
+            class: 'breadcrumbs__list',
+        })
+            each item in data.items
+                +el({
+                    tag: 'li',
+                    class: 'breadcrumbs__item',
+                })(itemprop='name')
+                    +el({
+                        tag: 'a',
+                        class: 'breadcrumbs__link',
+                        text: item,
+                    })(itemprop='url')

@@ -9,6 +9,7 @@ module.exports = gulp.series(
     'fonts',
     'favicon',
     'images',
+    'upload',
     'libScripts',
     'libStyles',
     'spriteSvg',

@@ -1,0 +1,8 @@
+mixin cross(data)
+    +el({
+        tag: 'span',
+        class: 'cross',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)

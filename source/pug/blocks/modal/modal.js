@@ -6,7 +6,9 @@ const modals = $$('.modal');
 const btnsClose = $$('.modal__close');
 const overlays = $$('.overlay--modal');
 const btnsOpenAppointment = $$('.js-appointment');
+const btnVideo = $('.intro__video-btn');
 const modalAppointment = $('.modal--appointment');
+const video = $('.modal--intro-video');
 
 const close = () => {
   for (let i = 0; i < modals.length; i += 1) {
@@ -35,8 +37,13 @@ for (let i = 0; i < btnsOpenAppointment.length; i += 1) {
   });
 }
 
+// включает модальное окно видео
+
+// btnVideo.addEventListener('click', () => {
+//   video.classList.add(ACTIVE);
+// });
+
 // Закрывает модальное окно при нажатии экскейп
 const onEscKeyup = e => {
-  e.preventDefault();
-  onEsc(e, close(e));
+  onEsc(e, close());
 };

@@ -41,8 +41,8 @@ mixin contacts(data)
                         },
                     ]
                 })
-        +card-form({
-            mix: 'contacts__card-form',
+        +form-card({
+            mix: 'contacts__form-card',
             heading: 'Обратная связь'
         })
             +content-form({
@@ -54,3 +54,4 @@ mixin contacts(data)
                 personalData: true,
                 submit: 'Отправить',
             })
+        .cotacts__dots

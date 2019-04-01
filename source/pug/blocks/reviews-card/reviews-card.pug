@@ -1,0 +1,24 @@
+mixin reviews-card(data)
+    +el({
+        class: 'reviews-card',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .reviews-card__header
+            .reviews-card__info
+                .reviews-card__name
+                    | #{data.name}
+                .reviews-card__place
+                    | #{data.place}
+            .reviews-card__image-wrap
+                +el({
+                    tag: 'img',
+                    class: 'reviews-card__image',
+                    src: data.image
+                })
+        .reviews-card__text
+            +el({
+                tag: 'p',
+                text: data.text,
+            })

@@ -2,61 +2,59 @@ mixin content-form(data)
     +form({
         class: 'content-form',
     })
-        .content-form__field-group
-            if data.userName
-                +field({
-                    mix: 'content-form__field',
-                    icon: 'user',
-                    mod: 'icon',
-                    label: 'Имя пользователя',
-                    name: 'userName',
-                    required: true,
-                    placeholder: 'Имя'
+        .content-form__inner
+            .content-form__field-group
+                if data.userName
+                    +field({
+                        mix: 'content-form__field',
+                        icon: 'user',
+                        mod: 'icon',
+                        label: 'Имя пользователя',
+                        name: 'userName',
+                        required: true,
+                        placeholder: 'Имя'
+                    })(aria-invalid='false')
+                if data.email
+                    +field({
+                        mix: 'content-form__field',
+                        icon: 'email',
+                        mod: 'icon',
+                        label: 'E-mail',
+                        type: 'email',
+                        name: 'email',
+                        placeholder: 'E-mail'
+                    })(aria-required='true', aria-invalid='false')
+                if data.phone
+                    +field({
+                        mix: 'content-form__field',
+                        icon: 'phone',
+                        mod: 'icon',
+                        label: 'Телефон',
+                        type: 'tel',
+                        name: 'phone',
+                        placeholder: 'Телефон'
+                    })(aria-required='true', aria-invalid='false')
+                if data.message
+                    +field({
+                        tag: 'textarea',
+                        mix: 'content-form__field',
+                        icon: 'message',
+                        mod: 'icon',
+                        label: 'Вопрос',
+                        type: 'email',
+                        name: 'message',
+                        placeholder: data.message.placeholder
+                    })(aria-required='true', aria-invalid='false')
+            if data.personalData
+                .content-form__personal
+                    +checkbox({
+                        mod: 'small',
+                        label: 'Согласие на обработку персональных данных',
+                        required: true,
+                    })(aria-required='true', aria-invalid='false')
+            .content-form__submit
+                +button({
+                    mod: 'bg-primary',
+                    type: 'submit',
+                    text: data.submit
                 })
-            if data.email
-                +field({
-                    mix: 'content-form__field',
-                    icon: 'email',
-                    mod: 'icon',
-                    label: 'E-mail',
-                    type: 'email',
-                    name: 'email',
-                    required: true,
-                    placeholder: 'E-mail'
-                })
-            if data.phone
-                +field({
-                    mix: 'content-form__field',
-                    icon: 'phone',
-                    mod: 'icon',
-                    label: 'Телефон',
-                    type: 'tel',
-                    name: 'phone',
-                    required: true,
-                    placeholder: 'Телефон'
-                })
-            if data.message
-                +field({
-                    tag: 'textarea',
-                    mix: 'content-form__field',
-                    icon: 'message',
-                    mod: 'icon',
-                    label: 'Вопрос',
-                    type: 'email',
-                    name: 'message',
-                    required: true,
-                    placeholder: data.message.placeholder
-                })
-        if data.personalData
-            .content-form__personal
-                +checkbox({
-                    mod: 'small',
-                    label: 'Согласие на обработку персональных данных',
-                    required: true,
-                })
-        .content-form__submit
-            +button({
-                mod: 'bg-primary',
-                type: 'submit',
-                text: data.submit
-            })

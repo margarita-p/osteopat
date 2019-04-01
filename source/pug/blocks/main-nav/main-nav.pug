@@ -37,7 +37,7 @@ mixin mainNavItem(classItemMainNav, data, item, active)
         class: classItemMainNav + '__item' + active,
         mod: data.mod,
         mix: data.mix,
-    })
+    })(itemprop='name')
         +el({
             tag: data.tag ? data.tag : 'a',
             href: data.href,
@@ -47,7 +47,7 @@ mixin mainNavItem(classItemMainNav, data, item, active)
             text: item ? item : data.text,
             before: data.before,
             after: data.after
-        })
+        })(itemprop='url')
             //-если есть иконка
             if data.icon
                 i(class = classItemMainNav + '__icon')

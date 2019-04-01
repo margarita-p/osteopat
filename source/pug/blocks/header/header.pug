@@ -5,12 +5,12 @@ mixin header(data)
             {
                 descr: 'Севастополь',
                 href: '79785032856',
-                phone: '<span>+7 (978)</span> 503-28-56',
+                phone: '+7 (978) <span>503-28-56</span>',
             },
             {
                 descr: 'Санкт-Петербург',
                 href: '78121234567',
-                phone: '<span>+7 (812)</span> 123-45-67',
+                phone: '+7 (812) <span>123-45-67</span>',
             },
         ];
 
@@ -25,7 +25,7 @@ mixin header(data)
         var nav = [
             {
                 text: 'Главная',
-                href: 'index.html',
+                href: 'main.html',
             },
             {
                 text: 'О докторе',
@@ -41,7 +41,7 @@ mixin header(data)
             },
             {
                 text: 'Остеопатия',
-                href: '',
+                href: 'category.html',
             },
             {
                 text: 'Вопрос-ответ',
@@ -88,7 +88,7 @@ mixin header(data)
                 +button-nav({
                     mix: 'header__button-nav',
                 })
-            nav.header__main-nav
+            nav.header__main-nav(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
                 +main-nav({
                     items: nav
                 })

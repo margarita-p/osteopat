@@ -1,0 +1,18 @@
+p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: font(primary);
+  font-size: 14px;
+  line-height: 1.4;
+  font-style: normal;
+  font-weight: 400;
+  color: color(black);
+}
+
+@include respond-to(medium) {
+
+}
+
+@include respond-to(large) {
+
+}

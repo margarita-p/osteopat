@@ -1,0 +1,12 @@
+a {
+  color: #666;
+  font: inherit;
+  text-transform: inherit;
+  transition: duration(md);
+  cursor: pointer;
+  text-decoration: underline;
+
+  @include hover {
+    text-decoration: none;
+  }
+}

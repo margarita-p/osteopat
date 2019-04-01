@@ -1,36 +1,25 @@
-extends ./templates/template
+include ./templates/head.pug
 
-block vars
-    - var pageTitle = 'Остеопрактика'
-    - var main = true
-    - var pageId = 1
+doctype html
+html(lang="ru-RU")
+    +head()
 
-
-block content
-    main.content
-        +intro({
-            mix: 'content__section content__section--intro',
-        })
-        +problems({
-            mix: 'content__section content__section--problems',
-        })
-        +reception({
-            mix: 'content__section content__section--reception',
-        })
-        +bio({
-            mix: 'content__section content__section--bio',
-        })
-        +principles({
-            mix: 'content__section content__section--principles',
-        })
-
-    +modal({
-        mod: 'appointment',
-        heading: 'Записаться на <br>приём к&nbsp;остеопракту'
-    })
-        +content-form({
-            userName: true,
-            phone: true,
-            personalData: true,
-            submit: 'Записаться',
-        })
+    .content.content--regular
+      .content__wrap
+        ul
+          li
+            a(href="main.html") Главная
+          li
+            a(href="faq.html") Вопросы и ответы
+          li
+            a(href="info.html") Полезная информация
+          li
+            a(href="reviews.html") Отзывы
+          li
+            a(href="category.html") Категории
+          li
+            a(href="article.html") Статья
+          li
+            a(href="contacts.html") Контакты
+          li
+            a(href="typography.html") Типографика
