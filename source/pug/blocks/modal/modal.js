@@ -41,13 +41,16 @@ if(btnVideo){
   }, false);
 }
 
-video.querySelector('.modal__close').addEventListener('click', () => {
-  video.querySelector('.modal__video').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-})
+if(video){
+  video.querySelector('.modal__close').addEventListener('click', () => {
+    video.querySelector('.modal__video').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  });
 
-video.querySelector('.modal__overlay').addEventListener('click', () => {
-  video.querySelector('.modal__video').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-})
+  video.querySelector('.modal__overlay').addEventListener('click', () => {
+    video.querySelector('.modal__video').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  });
+}
+
 
 // Закрывает модальное окно при нажатии экскейп
 const onEscKeyup = e => {
