@@ -6,8 +6,7 @@ mixin modal(data)
         js: data.js,
     })&attributes(attributes)
         +overlay({
-            mix: 'active',
-            mod: 'modal'
+            mix: 'modal__overlay active',
         })
         .modal__wrap
             .modal__content

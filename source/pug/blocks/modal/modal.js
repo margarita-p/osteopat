@@ -3,12 +3,11 @@ import { ACTIVE } from '../../../scripts/global/const';
 import onEsc from '../../../scripts/global/onEsc';
 
 const btnsClose = $$('.modal__close');
-const overlays = $$('.overlay--modal');
+const overlays = $$('.modal__overlay');
 const btnsModal = $$('.js-appointment');
 const modal = $('.modal--appointment');
 const btnVideo = $('.intro__video-btn');
 const video = $('.modal--intro-video');
-
 
 // Закрывает модальное окно по клику на крестик
 for (let i = 0; i < btnsClose.length; i += 1) {
@@ -43,6 +42,10 @@ if(btnVideo){
 }
 
 video.querySelector('.modal__close').addEventListener('click', () => {
+  video.querySelector('.modal__video').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+})
+
+video.querySelector('.modal__overlay').addEventListener('click', () => {
   video.querySelector('.modal__video').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 })
 

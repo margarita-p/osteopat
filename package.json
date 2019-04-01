@@ -11,7 +11,7 @@
     "lint:scripts": "./node_modules/.bin/eslint source/**/*.js --fix",
     "lint:styles": "./node_modules/.bin/stylelint source/**/*.scss",
     "lint": "npm run lint:styles && npm run lint:scripts",
-    "zip": "set NODE_ENV=production gulp clean && gulp build && gulp copy && gulp sassCopy && gulp sassCopyBlock && gulp zip"
+    "prod": "set NODE_ENV=production gulp clean && gulp build && gulp copy && gulp sassCopy && gulp sassCopyBlock"
   },
   "keywords": [
     "development",
