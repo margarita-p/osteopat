@@ -24,7 +24,7 @@
     .modal__close {
       transform: translate(20px, -70px);
 
-      .button-remove__icon {
+      .btn-remove__icon {
         @include icon-cross-color(color(white));
       }
     }

@@ -47,7 +47,7 @@ const onBtnVideoClick = (e) => {
 }
 
 // включает модальное окно видео
-btnVideo.addEventListener('click', onBtnVideoClick);
+// btnVideo.addEventListener('click', onBtnVideoClick);
 
 // Закрывает модальное окно при нажатии экскейп
 const onEscKeyup = e => {

@@ -2986,8 +2986,8 @@ body > *
         -ms-transform: translate(20px, -70px);
             transform: translate(20px, -70px);
 }
-.modal--video .modal__close .button-remove__icon::before,
-.modal--video .modal__close .button-remove__icon::after
+.modal--video .modal__close .btn-remove__icon::before,
+.modal--video .modal__close .btn-remove__icon::after
 {
     background-color: #fff;
 }
