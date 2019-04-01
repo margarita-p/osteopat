@@ -10,7 +10,8 @@ html(lang="ru-RU")
         +head()
 
     body
-        block icons
+        div.hidden(style='display: none;')
+            include ./icons.pug
         block header
             +header({})
         block intro

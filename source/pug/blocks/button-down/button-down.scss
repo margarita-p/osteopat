@@ -17,10 +17,6 @@
   height: 16px;
   transform: translate(-50%) rotate(90deg);
   fill: color(primary);
-  // animation-name: btn-down;
-  // animation-duration: 1.2s;
-  // animation-iteration-count: infinite;
-  // animation-timing-function: func(primary);
 
   &--top {
     top: 11px;
@@ -28,16 +24,5 @@
 
   &--bottom {
     top: 19px;
-  }
-}
-
-@keyframes btn-down {
-  from {
-    transform: translate(-50%) translateY(-1px) rotate(90deg);
-    opacity: 0.5;
-  }
-  to {
-    transform: translate(-50%) translateY(0) rotate(90deg);
-    opacity: 1;
   }
 }

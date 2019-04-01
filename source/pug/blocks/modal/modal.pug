@@ -21,5 +21,5 @@ mixin modal(data)
                         text: data.heading,
                     })
                 if data.video
-                    iframe.modal__video(width='560' height='315' src=data.video allowfullscreen)
+                    iframe.modal__video(id="player" type="text/html" width="640" height="360" src="http://www.youtube.com/embed/UfVpoI5ksag?enablejsapi=1")
                 block

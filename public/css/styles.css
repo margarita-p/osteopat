@@ -412,6 +412,7 @@ select
 table
 {
     width: 100%;
+    margin-bottom: 20px;
 
     border-collapse: collapse;
 }
@@ -1538,42 +1539,6 @@ body > *
     top: 19px;
 }
 
-@-webkit-keyframes btn-down
-{
-    from
-    {
-        -webkit-transform: translate(-50%) translateY(-1px) rotate(90deg);
-                transform: translate(-50%) translateY(-1px) rotate(90deg);
-
-        opacity: .5;
-    }
-    to
-    {
-        -webkit-transform: translate(-50%) translateY(0) rotate(90deg);
-                transform: translate(-50%) translateY(0) rotate(90deg);
-
-        opacity: 1;
-    }
-}
-
-@keyframes btn-down
-{
-    from
-    {
-        -webkit-transform: translate(-50%) translateY(-1px) rotate(90deg);
-                transform: translate(-50%) translateY(-1px) rotate(90deg);
-
-        opacity: .5;
-    }
-    to
-    {
-        -webkit-transform: translate(-50%) translateY(0) rotate(90deg);
-                transform: translate(-50%) translateY(0) rotate(90deg);
-
-        opacity: 1;
-    }
-}
-
 .field
 {
     position: relative;
@@ -2486,15 +2451,15 @@ body > *
     }
     .half-round--lg
     {
-        height: 480px;
+        height: 520px;
     }
     .half-round--left-lg
     {
-        border-radius: 240px 0 0 240px;
+        border-radius: 260px 0 0 260px;
     }
     .half-round--right-lg
     {
-        border-radius: 0 240px 240px 0;
+        border-radius: 0 260px 260px 0;
     }
 }
 
@@ -2792,8 +2757,6 @@ body > *
     }
     .intro__wrap
     {
-        padding-bottom: 0; 
-
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
         flex-grow: 1;
@@ -2877,8 +2840,7 @@ body > *
 
         width: 600px;
         margin: 0 -5px;
-        margin-top: -190px;
-        margin-bottom: 20px; 
+        margin-top: -190px; 
 
         -webkit-box-align: start;
         -ms-flex-align: start;
@@ -3229,6 +3191,33 @@ body > *
     .problems
     {
         position: relative;
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column;
+
+        min-height: 520px; 
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+    .problems__wrap
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column;
+
+        height: 100%; 
+
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
     }
     .problems__image
     {
@@ -3245,9 +3234,21 @@ body > *
     }
     .problems__text
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column;
+
         width: 50%;
         margin-left: auto;
-        padding-left: 40px;
+        padding-left: 40px; 
+
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
     }
     .problems__heading
     {
@@ -3257,19 +3258,28 @@ body > *
             -ms-transform: translate(-40px);
                 transform: translate(-40px);
     }
-    .problems__list .list__item
+    .problems__list
     {
-        margin-bottom: 4px;
+        margin-bottom: 30px; 
+
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
     }
     .problems__btn
     {
         width: auto;
-        min-width: 286px;
+        width: 286px;
+        margin-top: auto;
     }
 }
 
 @media (min-width: 1220px)
 {
+    .problems
+    {
+        min-height: 680px;
+    }
     .problems__text
     {
         padding-left: 50px;
@@ -3278,13 +3288,15 @@ body > *
     {
         font-size: 36px;
 
+        margin-bottom: 40px;
+
         -webkit-transform: translate(-90px);
             -ms-transform: translate(-90px);
                 transform: translate(-90px);
     }
-    .problems__list .list__item
+    .problems__list
     {
-        margin-bottom: 7px;
+        margin-bottom: 40px;
     }
 }
 

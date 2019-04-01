@@ -185,7 +185,6 @@
 
   .intro__wrap {
     flex-grow: 1;
-    padding-bottom: 0;
 
     &::before {
       bottom: 0;
@@ -251,7 +250,6 @@
     width: 600px;
     margin: 0 -5px;
     margin-top: -190px;
-    margin-bottom: 20px;
 
     .list__item {
       width: calc(50% - 20px);
